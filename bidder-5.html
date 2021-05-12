@@ -125,9 +125,14 @@
                     <div class="row row-1 mb-2 align-items-center">
                       <div class="col">Registration number<span class="text-red">*</span>
                       </div>
-                      <div class="col-auto fz-14">0/8</div>
+                      <div class="col-auto fz-14">
+                        <div id="the-count">
+                          <span id="current">0</span>
+                          <span id="maximum">/8</span>
+                        </div>
+                      </div>
                     </div>
-                    <input type="number" class="form-control" placeholder="1010584421" name="registrationnumber">
+                    <input type="number" class="form-control" placeholder="1010584421" id="count-eight" maxlength="8" name="registrationnumber">
                   </div>
                 </div>
               </div>

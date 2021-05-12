@@ -63,6 +63,30 @@ $(function() {
     }
   });
 
+  $('#count-eight').keyup(function() {  
+    var characterCount = $(this).val().length,
+        current = $('#current'),
+        maximum = $('#maximum'),
+        theCount = $('#the-count'); 
+    current.text(characterCount);
+  });
+
+  $('#count-ten').keyup(function() {  
+    var characterCount = $(this).val().length,
+        current = $('#current-10'),
+        maximum = $('#maximum-10'),
+        theCount = $('#the-count-10'); 
+    current.text(characterCount);
+  });
+
+  $('#count-200').keyup(function() {  
+    var characterCount = $(this).val().length,
+        current = $('#current-200'),
+        maximum = $('#maximum-200'),
+        theCount = $('#the-count-200'); 
+    current.text(characterCount);
+  });
+
   var fileTypes = ['pdf', 'docx', 'rtf', 'jpg', 'jpeg', 'png', 'txt']; //acceptable file types
   function readURL(input) {
       if (input.files && input.files[0]) {
@@ -211,7 +235,7 @@ function ekUpload(){
   }
 
   function uploadFile(file) {
-
+    
     var xhr = new XMLHttpRequest(),
       fileInput = document.getElementById('class-roster-file'),
       pBar = document.getElementById('file-progress'),
@@ -228,12 +252,10 @@ function ekUpload(){
         xhr.onreadystatechange = function(e) {
           if (xhr.readyState == 4) {
             // Everything is good!
-
             // progress.className = (xhr.status == 200 ? "success" : "failure");
             // document.location.reload(true);
           }
         };
-
         // Start upload
         xhr.open('POST', document.getElementById('file-upload-form').action, true);
         xhr.setRequestHeader('X-File-Name', file.name);
@@ -245,7 +267,6 @@ function ekUpload(){
       }
     }
   }
-
   // Check for the various File API support.
   if (window.File && window.FileList && window.FileReader) {
     Init();
@@ -254,7 +275,6 @@ function ekUpload(){
   }
 }
 ekUpload();
-
 
 });
 
