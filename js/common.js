@@ -19,6 +19,50 @@ $(function() {
     disable: 'mobile'
   });
 
+  $('#form').validate({
+    rules: {
+      phone: {
+        required: true,
+        minlength: 13,
+        maxlength: 13,
+      },
+      code: {
+        required: true,
+        minlength: 11,
+        maxlength: 11,
+      },
+      firstname: {
+        required: true,
+        minlength: 2
+      },
+      email: {
+        required: true,
+        minlength: 6
+      },
+      registrationnumber: {
+        required: true,
+        minlength: 8,
+        maxlength: 8,
+      },
+      registrationnumber2: {
+        required: true,
+        minlength: 10,
+        maxlength: 10,
+      },
+      description: {
+        required: true,
+        minlength: 1,
+        maxlength: 200,
+      },
+    },
+
+    submitHandler: function(form) {
+      $(form).submit(function(e) {
+        e.preventDefault();
+      });
+    }
+  });
+
   var fileTypes = ['pdf', 'docx', 'rtf', 'jpg', 'jpeg', 'png', 'txt']; //acceptable file types
   function readURL(input) {
       if (input.files && input.files[0]) {

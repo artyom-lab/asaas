@@ -47,6 +47,10 @@ a
 input
 	&[type=radio], &[type=checkbox]
 		display: none
+	&[type=number]
+		-moz-appearance: textfield
+		&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+			-webkit-appearance: none
 
 @media (min-width: 1200px)
 	.container 
@@ -348,6 +352,8 @@ input
 	&:disabled
 		color: #B7B7BD
 		background-color: #FCFCFC
+	&.error
+		border-color: #EF6A82
 
 .form-group-gray
 	color: #B7B7BD

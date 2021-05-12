@@ -42,6 +42,10 @@ a {
 
 input[type=radio], input[type=checkbox] {
   display: none; }
+input[type=number] {
+  -moz-appearance: textfield; }
+  input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none; }
 
 @media (min-width: 1200px) {
   .container {
@@ -341,6 +345,8 @@ input[type=radio], input[type=checkbox] {
   .form-control:disabled {
     color: #B7B7BD;
     background-color: #FCFCFC; }
+  .form-control.error {
+    border-color: #EF6A82; }
 
 .form-group-gray {
   color: #B7B7BD; }

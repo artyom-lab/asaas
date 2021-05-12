@@ -25,97 +25,165 @@
       <div class="collapse navbar-collapse text-center text-xl-left" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto align-items-xl-center my-3 my-xl-0">
           <li class="nav-item">
-            <a class="nav-link" href="#!">Auctions</a>
+            <a class="nav-link" href="#!">All Auctions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!">My Bids</a>
+            <a class="nav-link" href="#!">My Auctions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!">Transactions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Account</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-red" href="#!">Sign out</a>
+            <a class="nav-link active" href="#!">Account</a>
           </li>
         </ul>
+        <a href="#!" class="btn btn-success btn-sign mb-3 mb-xl-0">New Auction</a>
       </div>
     </div>
   </nav>
 
-  <section class="section">
+  <section class="section bg-white">
     <div class="container">
       <div class="form-row justify-content-center">
-        <div class="col-sm-11 col-md-8 col-xl-10">
-          <div class="card card-signup">
+        <div class="col-sm-11 col-md-8 col-xl-9">
+          <div class="">
             <div class="row align-items-center mb-2">
               <div class="col">
-                <h2 class="h2 lh-1">Last step</h2>
-              </div>
-              <div class="col-auto">
-                <div>
-                  <img src="img/lock.svg" alt="">
-                </div>
+                <h2 class="h2 lh-1">Company account</h2>
               </div>
             </div>
             <div class="row">
-              <div class="col-xl-8">
-                <p class="pb-3">This information will only be shared with Auctioneers if you win one of their auctions. You can register as a company or a private bidder.</p>
+              <div class="col-xl-9">
+                <p>For security reasons, key account information such as phone number, email, and company details can only be updated through contacting Asaas.</p>
               </div>
             </div>
             <form id="form">
-              <div class="row">
+              <div class="row pt-3">
                 <div class="col-xl-6">
                   <div class="form-group form-group-gray">
-                    <div class="mb-2">First name</div>
-                    <input type="text" class="form-control" placeholder="Albus" name="firstname" disabled>
-                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                    <div class="row row-1 mb-2 align-items-center">
+                      <div class="col text-black">Company display name</div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Awesome Auctions" name="firstname">
+                    <div class="fz-14 mt-2">Use your company’s brand or shorthand name. Example: Awesome Auctions</div>
                   </div>
-                </div>
-                <div class="col-xl-6">
-                  <div class="form-group form-group-gray">
-                    <div class="mb-2">Second name</div>
-                    <input type="text" class="form-control" placeholder="Severus" name="firstname" disabled>
-                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-6">
-                  <div class="form-group form-group-gray">
-                    <div class="mb-2">Third name</div>
-                    <input type="text" class="form-control" placeholder="Al" name="firstname" disabled>
-                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div class="form-group form-group-gray">
-                    <div class="mb-2">Family name</div>
-                    <input type="text" class="form-control" placeholder="Potter" name="firstname" disabled>
-                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-6">
                   <div class="form-group">
-                    <div class="mb-2">Your email<span class="text-red">*</span></div>
+                    <div class="row row-1 mb-3 align-items-center">
+                      <div class="col">Company icon
+                      </div>
+                    </div>
+                    <div class="row row-1">
+                      <div class="col-sm-6 col-lg-4">
+                        <div id="file-upload-form" class="uploader">
+                          <input id="file-upload" type="file" name="fileUpload" accept="image/*"/>
+                          <label for="file-upload" id="file-drag">
+                            <img id="file-image" src="#!" alt="Preview" class="hidden">
+                            <div id="start">
+                              <i class="bg-upload" aria-hidden="true"></i>
+                              <div>Upload</div>
+                              <div id="notimage" class="hidden">Please select an image</div>
+                            </div>
+                            <div id="response" class="hidden">
+                              <div id="messages"></div>
+                            </div>
+                          </label>
+                        </div>           
+                      </div>
+                      <div class="col-sm-6 col-lg-8 mt-3 mt-sm-0">
+                        <div class="fz-14">
+                          <p>Please upload your comapny’s icon or emblem. This image will be displayed on your auctions.</p>
+                          <p>For ideal results upload a 400x400 square jpeg file.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="row row-1 mb-2 align-items-center">
+                      <div class="col text-black">Company description</div>
+                    </div>
+                    <textarea type="text" class="form-control form-textarea" placeholder="At Awesome auctions we are focused on developing the regions" name="description"></textarea>
+                    <div class="fz-14 mt-2">This description will be displayed on your auctions</div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row pt-3">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Company legal name</div>
+                    <input type="text" class="form-control" placeholder="Awesome Auctions Co." name="firstname">
+                    <div class="fz-14 mt-2">As per your legal license. Example: Aweosome Auctions Co.</div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="row row-1 mb-2 align-items-center">
+                      <div class="col text-black">Company address</div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="King Fahd Rd, Al Olaya, Riyadh 11564" name="firstname">
+                    <div class="fz-14 mt-2">Your company’s headquarters or legal addres</div>
+                  </div>
+                </div>
+              </div>            
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Comapny registration number</div>
+                    <input type="number" class="form-control" placeholder="1010584421" name="registrationnumber">
+                    <div class="fz-14 mt-2">Your license registration number found on your X10C certificate</div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row pt-3">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Reprensetative’s first name</div>
+                    <input type="text" class="form-control" placeholder="Albus" name="firstname">
+                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="row row-1 mb-2 align-items-center">
+                      <div class="col text-black">Reprensetative’s second name</div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Severus" name="firstname">
+                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Reprensetative’s third name</div>
+                    <input type="text" class="form-control" placeholder="Al" name="firstname">
+                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="row row-1 mb-2 align-items-center">
+                      <div class="col text-black">Reprensetative’s family name</div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Potter" name="firstname">
+                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                  </div>
+                </div>
+              </div>            
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Your work email</div>
                     <input type="email" class="form-control" placeholder="albus@ministryofmagic.com.sa" name="email">
                   </div>
                 </div>
               </div>
-              <div class="row mt-2 pb-3">
-                <div class="col-auto">
-                  <label class="check-group checkbox-group">
-                    <input type="checkbox">
-                    <div>Sign up as a company</div>
-                  </label>
-                </div>
-              </div>
               <div class="row align-items-center mt-4">
                 <div class="col-sm-auto">
-                  <a href="#!" class="btn btn-success btn-sign ml-0 fz-18 font-weight-bold d-block d-sm-inline-block">Confrim and start bidding</a>
+                  <a href="#!" class="btn btn-primary btn-sign btn-edit ml-0 fz-18 d-block d-sm-inline-block">Edit your company account</a>
+                </div>
+                <div class="col-sm text-center text-sm-right mt-3 mt-sm-0">
+                  <a href="#!" class="see-all see-all-2 fz-18 text-red">Sign out of Asaas</a>
                 </div>
               </div>
             </form>

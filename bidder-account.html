@@ -62,82 +62,84 @@
                 <p class="pb-3">For security reasons, key account information such as phone number, email, and company details can only be updated through contacting Asaas.</p>
               </div>
             </div>
-            <div class="row">
-              <div class="col-xl-6">
-                <div class="form-group form-group-gray">
-                  <div class="mb-2 text-black">First name</div>
-                  <input type="text" class="form-control" placeholder="Albus">
-                </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="form-group form-group-gray">
-                  <div class="mb-2 text-black">Second name</div>
-                  <input type="text" class="form-control" placeholder="Severus">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-6">
-                <div class="form-group form-group-gray">
-                  <div class="mb-2 text-black">Third name</div>
-                  <input type="text" class="form-control" placeholder="Al">
-                </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="form-group form-group-gray">
-                  <div class="mb-2 text-black">Family name</div>
-                  <input type="text" class="form-control" placeholder="Potter">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-6">
-                <div class="form-group form-group-gray">
-                  <div class="mb-2 text-black">Phone number</div>
-                  <input type="text" class="form-control" placeholder="+966548777798">
-                </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="form-group form-group-gray">
-                  <div class="mb-2 text-black">Email</div>
-                  <input type="text" class="form-control" placeholder="albus@ministryofmagic.com.sa">
-                </div>
-              </div>
-            </div>
-            <hr>
-            <div class="row pt-3">
-              <div class="col-xl-6">
-                <div class="form-group form-group-gray">
-                  <div class="mb-2 text-black">Company name</div>
-                  <input type="text" class="form-control" placeholder="Awesome Industries Co.">
-                </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="form-group form-group-gray">
-                  <div class="row row-1 mb-2 align-items-center">
-                    <div class="col text-black">Registration number</div>
-                    <div class="col-auto fz-14">10/10</div>
+            <form id="form">
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">First name</div>
+                    <input type="text" class="form-control" placeholder="Albus" name="firstname">
                   </div>
-                  <input type="text" class="form-control" placeholder="101 502520 050">
+                </div>
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Second name</div>
+                    <input type="text" class="form-control" placeholder="Severus" name="firstname">
+                  </div>
                 </div>
               </div>
-            </div>            
-            <div class="row">
-              <div class="col-xl-6">
-                <div class="form-group form-group-gray">
-                  <div class="mb-2 text-black">Company address</div>
-                  <input type="text" class="form-control" placeholder="52 King Abdullah Rd, Riyadh">
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Third name</div>
+                    <input type="text" class="form-control" placeholder="Al" name="firstname">
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Family name</div>
+                    <input type="text" class="form-control" placeholder="Potter" name="firstname">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row align-items-center mt-4">
-              <div class="col-sm-auto">
-                <a href="#!" class="btn btn-primary btn-sign btn-edit ml-0 fz-18 d-block d-sm-inline-block">Edit your account</a>
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Phone number</div>
+                    <input type="number" class="form-control" placeholder="+966548777798" name="phone">
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Email</div>
+                    <input type="email" class="form-control" placeholder="albus@ministryofmagic.com.sa" name="email">
+                  </div>
+                </div>
               </div>
-              <div class="col-sm text-center text-sm-right mt-3 mt-sm-0">
-                <a href="#!" class="see-all see-all-2 fz-18 text-red">Sign out of Asaas</a>
+              <hr>
+              <div class="row pt-3">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Company name</div>
+                    <input type="text" class="form-control" placeholder="Awesome Industries Co." name="firstname">
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="row row-1 mb-2 align-items-center">
+                      <div class="col text-black">Registration number</div>
+                      <div class="col-auto fz-14">10/10</div>
+                    </div>
+                    <input type="number" class="form-control" placeholder="101 502520 050" name="registrationnumber2">
+                  </div>
+                </div>
+              </div>            
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="form-group form-group-gray">
+                    <div class="mb-2 text-black">Company address</div>
+                    <input type="text" class="form-control" placeholder="52 King Abdullah Rd, Riyadh" name="firstname">
+                  </div>
+                </div>
               </div>
-            </div>
+              <div class="row align-items-center mt-4">
+                <div class="col-sm-auto">
+                  <a href="#!" class="btn btn-primary btn-sign btn-edit ml-0 fz-18 d-block d-sm-inline-block">Edit your account</a>
+                </div>
+                <div class="col-sm text-center text-sm-right mt-3 mt-sm-0">
+                  <a href="#!" class="see-all see-all-2 fz-18 text-red">Sign out of Asaas</a>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -226,6 +228,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
   <script src="js/common.js"></script>
 
 </body>

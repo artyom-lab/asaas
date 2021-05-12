@@ -58,18 +58,20 @@
               </div>
             </div>
             <p class="pb-3">Please enter your phone number to sign up or sign in. If you already have an account, you will receive an email with a magic login link.</p>
-            <div class="form-group">
-              <div class="mb-2">Your phone number<span class="text-red">*</span></div>
-              <input type="text" class="form-control" placeholder="+966548777798">
-            </div>
-            <div class="row align-items-center mt-4">
-              <div class="col-sm-auto">
-                <a href="bidder-2.html" class="btn btn-success btn-sign ml-0 fz-18 font-weight-bold d-block d-sm-inline-block">Get SMS code</a>
+            <form id="form">
+              <div class="form-group">
+                <div class="mb-2">Your phone number<span class="text-red">*</span></div>
+                <input type="number" class="form-control" placeholder="+966548777798" name="phone">
               </div>
-              <div class="col-sm text-center text-sm-right mt-2 mt-sm-0">
-                <a href="auctioneer-1.html" class="see-all see-all-2">For Auctioneers</a>
+              <div class="row align-items-center mt-4">
+                <div class="col-sm-auto">
+                  <a href="#!" class="btn btn-success btn-sign ml-0 fz-18 font-weight-bold d-block d-sm-inline-block">Get SMS code</a>
+                </div>
+                <div class="col-sm text-center text-sm-right mt-2 mt-sm-0">
+                  <a href="auctioneer-1.html" class="see-all see-all-2">For Auctioneers</a>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -158,6 +160,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
   <script src="js/common.js"></script>
 
 </body>
