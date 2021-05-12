@@ -23,7 +23,7 @@ $(function() {
     rules: {
       phone: {
         required: true,
-        minlength: 13,
+        minlength: 12,
         maxlength: 13,
       },
       code: {
