@@ -8,7 +8,7 @@
 	font-weight: normal
 @font-face
 	font-family: 'URWGeometric-Medium'
-	src: url('../fonts/URWGeometric-Medium.ttf')
+	src: url('../fonts/URWGeometric-Medium.woff2')
 	font-weight: 500
 @font-face
 	font-family: 'URWGeometric-SemiBold'
@@ -16,7 +16,7 @@
 	font-weight: 600
 @font-face
 	font-family: 'URWGeometric-Bold'
-	src: url('../fonts/URWGeometric-Bold.ttf')
+	src: url('../fonts/URWGeometric-Bold.woff2')
 	font-weight: bold
 
 $transition: .3s
@@ -32,14 +32,13 @@ body
 	font-family: 'URWGeometric-Regular', sans-serif
 	background-color: #FCFCFC
 	display: flex
+	color: #2A2A2A
 	flex-direction: column
 	min-height: 100vh
 
 a 
 	text-decoration: none !important
 	transition: .3s
-	&:hover 
-		opacity: .6
 	&.black 
 		&:hover 
 			color: #000
@@ -63,13 +62,12 @@ input
 	color: #EF6A82 !important
 
 .text-black
-	color: #000 !important
+	color: #2A2A2A !important
 
 .navbar 
 	padding: 12px 16px
 	background-color: #FFF
-	border-bottom: 1px solid #C6C6C6
-	box-shadow: 0px 0px 10px rgba(164, 164, 164, 0.15)
+	box-shadow: 0px 0px 10px rgba(164, 164, 164, 0.15), 0px 0.5px 0px #C8C8C8
 	.navbar-brand 
 		font-size: 0
 		img
@@ -80,9 +78,9 @@ input
 		position: relative
 		color: #1F687E !important
 		font-size: 16px
-		font-weight: bold
 		display: inline-block
 		padding: 8px 14px !important
+		font-weight: bold
 		&.text-red
 			color: #EF6A82 !important
 		&:after 
@@ -99,8 +97,18 @@ input
 			transform: translateX(-50%)
 		&:hover, &.active
 			opacity: 1
+			color: #165366
 			&:after
 				width: calc(100% - 50px)
+
+.logo
+	.blue-path, .pink-path
+		transition: $transition
+	&:hover 
+		.blue-path
+			transform: translate(2px, -2px)
+		.pink-path
+			transform: translate(-2px, 2px)
 
 .row-1
 	margin-left: -8px
@@ -114,14 +122,11 @@ input
 
 .h2, h2
 	font-size: 40px
-	font-weight: bold
-
-.h2 
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	font-weight: bold 
 
 .h3, h3
 	font-size: 24px
-	font-weight: bold
+	font-weight: bold 
 
 .h5, h5
 	font-size: 19px
@@ -140,14 +145,19 @@ input
 .lh-1
 	line-height: 1
 
+hr 
+	border-color: #EEEEF0
+
 .btn-sign
 	margin-left: 10px
 	background: #24997D
 	transition: $transition
-	font-weight: bold
+	border: 0
+	font-weight: 500
 	&:hover 
-		background: #24997D
-		opacity: .7
+		background: #218C73
+	&:focus 
+		box-shadow: none
 
 .btn-edit
 	background: #1F687E
@@ -198,16 +208,15 @@ input
 	display: inline-block
 	color: #1F687E
 	font-size: 18px
-	font-weight: bold
+	font-weight: 600
 	&:hover
 		opacity: 1
-		color: #1F687E
+		color: #165366
 		transform: translateX(5px)
 
 .see-all-2
 	&:hover
 		transform: translateX(0)
-		opacity: .7
 
 .a-property
 	color: #000
@@ -217,8 +226,10 @@ input
 .card-2
 	height: 100%
 	border: 1px solid #E0E0E0
+	border-radius: 8px
+	overflow: hidden
 	.card-block
-		padding: 4px 15px 32px
+		padding: 10px 16px 32px
 		height: 100%
 		display: flex
 		flex-direction: column
@@ -229,13 +240,13 @@ input
 	margin-top: auto
 	@media (max-width: 991.98px)
 		padding: 48px 0
-	a 
-		color: #FFF
-		display: inline-block
-		opacity: .7
-		padding-bottom: 8px
-		&:hover 
-			opacity: .4
+	.a-block
+		a 
+			color: rgba(255, 255, 255, 0.75)
+			display: inline-block
+			padding-bottom: 8px
+			&:hover 
+				color: rgba(255, 255, 255, 0.4)
 			
 .watch-container
 	position: relative
@@ -283,11 +294,16 @@ input
 					background: #FFF
 					opacity: .7
 					transition: $transition
-				&.active, &:hover
+				&:hover
+					span
+						width: 12px
+						height: 12px
+				&.active
 					span
 						width: 16px
 						height: 16px
 						opacity: 1
+
 	.owl-nav
 		[class*=owl-]
 			border-radius: 100px
@@ -333,32 +349,35 @@ input
 	border: 1px solid #E0E0E0
 	padding: 80px
 	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05)
-	border-radius: 20px
+	border-radius: 16px
 	@media (max-width: 991.98px)
 		padding: 60px
 	@media (max-width: 575.98px)
 		padding: 40px 20px
 
 .form-control
-	padding: 8px 13px
-	height: 45px
+	padding: 10px 13px
+	height: 44px
 	font-size: 18px
+	transition: $transition
 	color: #888893
-	border-color: #DCDCDC
+	border: 1px solid #EEEEF0
+	&:hover 
+		background: #FCFCFC
 	&:focus
-		border-color: #DCDCDC
-		background-color: #FFF
-		box-shadow: 0px 0px 8px rgba(36, 153, 125, 0.25) 
+		border-color: #B7B7BD
+		color: #2A2A2A
+		box-shadow: none
 	&:disabled
+		border-color: #EEEEF0
 		color: #B7B7BD
 		background-color: #FCFCFC
 	&.error
 		border-color: #EF6A82
 
-.form-group-gray
-	color: #B7B7BD
-	.form-control
-		background-color: #FCFCFC
+.form-group
+	&.disabled
+		color: #B7B7BD
 
 label
 	&.check-group
@@ -386,7 +405,7 @@ label
 		input
 			&:checked ~ div:before
 				border-color: #448FFF
-				background-color: #448FFF
+				border-radius: 6px
 	&.checkbox-group
 		padding-left: 30px
 		div:before
@@ -395,8 +414,11 @@ label
 			height: 20px
 			border-color: #888893
 		input
-			&:checked ~ div:before
-				background-image: url(../img/i-verified.svg)
+			&:checked ~ div
+				color: #2A2A2A
+				&:before
+					background-image: url(../img/check-square.svg)
+					background-size: cover
 
 .list-check
 	margin-bottom: 0
@@ -432,14 +454,14 @@ label
 .uploader-plugin
 	.btn-orange
 		background-color: transparent
-		border-color: #DCDCDC !important
+		border-color: #EEEEF0 !important
 		color: #1F687E
 		text-align: left
 		font-size: 18px
 		width: 100%
 		font-weight: 500
 		&:hover 
-			border-color: #1F687E !important
+			background: #FCFCFC
 		img 
 			width: 30px
 	.fileUpload
@@ -464,17 +486,17 @@ label
 		min-height: 120px
 		min-width: 120px
 		text-align: center
-		border-radius: 7px
-		border: 1px solid #DCDCDC
+		border-radius: 4px
+		border: 1px solid #EEEEF0
 		transition: $transition
 		cursor: pointer
 		&:hover 
-			border: 1px solid #1F687E
+			background: #FCFCFC
 		&.file-upload 
 			padding: 0
 			border: 0
 	#start 
-		padding-top: 20px
+		padding: 22px 10px
 		&.hidden 
 			display: none
 	#response 
@@ -508,4 +530,8 @@ label
 	background-position: center center
 	width: 24px
 	height: 20px
+
+.the-count
+	color: #888893
+	font-size: 14px
 

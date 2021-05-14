@@ -50,21 +50,24 @@
             <a class="nav-link" href="#!">Transactions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#!">Account</a>
+            <a class="nav-link" href="#!">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-red" href="#!">Sign out</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section class="section bg-white">
+  <section class="section">
     <div class="container">
       <div class="form-row justify-content-center">
-        <div class="col-sm-11 col-md-8 col-xl-9">
-          <div class="">
+        <div class="col-sm-11 col-md-8 col-xl-10">
+          <div class="card card-signup">
             <div class="row align-items-center mb-2">
               <div class="col">
-                <h2 class="h2 lh-1">Edit your account</h2>
+                <h2 class="h2 lh-1">Last step</h2>
               </div>
               <div class="col-auto">
                 <div>
@@ -74,84 +77,61 @@
             </div>
             <div class="row">
               <div class="col-xl-8">
-                <p>Your information is not shared publicly on Asaas. <br> We only share your details to the auctioneer whose auction you won.</p>
-                <p class="pb-3">For security reasons, key account information such as phone number, email, and company details can only be updated through contacting Asaas.</p>
+                <p class="pb-3">This information will only be shared with Auctioneers if you win one of their auctions. You can register as a company or a private bidder.</p>
               </div>
             </div>
             <form id="form">
               <div class="row">
                 <div class="col-xl-6">
-                  <div class="form-group">
-                    <div class="mb-2">First name<span class="text-red">*</span></div>
-                    <input type="text" class="form-control" placeholder="Albus" name="firstname">
+                  <div class="form-group disabled">
+                    <div class="mb-2">First name</div>
+                    <input type="text" class="form-control" placeholder="Albus" name="firstname" disabled>
+                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
                   </div>
                 </div>
                 <div class="col-xl-6">
-                  <div class="form-group">
+                  <div class="form-group disabled">
                     <div class="mb-2">Second name</div>
-                    <input type="text" class="form-control" placeholder="Severus" name="firstname">
+                    <input type="text" class="form-control" placeholder="Severus" name="firstname" disabled>
+                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xl-6">
-                  <div class="form-group">
+                  <div class="form-group disabled">
                     <div class="mb-2">Third name</div>
-                    <input type="text" class="form-control" placeholder="Al" name="firstname">
+                    <input type="text" class="form-control" placeholder="Al" name="firstname" disabled>
+                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
                   </div>
                 </div>
+                <div class="col-xl-6">
+                  <div class="form-group disabled">
+                    <div class="mb-2">Family name</div>
+                    <input type="text" class="form-control" placeholder="Potter" name="firstname" disabled>
+                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
                 <div class="col-xl-6">
                   <div class="form-group">
-                    <div class="mb-2">Family name<span class="text-red">*</span></div>
-                    <input type="text" class="form-control" placeholder="Potter" name="firstname">
+                    <div class="mb-2">Your email<span class="text-red">*</span></div>
+                    <input type="email" class="form-control" placeholder="albus@ministryofmagic.com.sa" name="email">
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-xl-6">
-                  <div class="form-group disabled">
-                    <div class="mb-2">Phone number<span class="text-red">*</span></div>
-                    <input type="number" class="form-control" placeholder="+966548777798" name="phone" disabled>
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div class="form-group disabled">
-                    <div class="mb-2">Email<span class="text-red">*</span></div>
-                    <input type="email" class="form-control" placeholder="albus@ministryofmagic.com.sa" name="email" disabled>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row pt-3">
-                <div class="col-xl-6">
-                  <div class="form-group disabled">
-                    <div class="mb-2">Company name<span class="text-red">*</span></div>
-                    <input type="text" class="form-control" placeholder="Awesome Industries Co." name="firstname" disabled>
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div class="form-group disabled">
-                    <div class="row row-1 mb-2 align-items-center">
-                      <div class="col">Registration number<span class="text-red">*</span></div>
-                    </div>
-                    <input type="number" class="form-control" placeholder="101 502520 050" name="registrationnumber2" disabled>
-                  </div>
-                </div>
-              </div>            
-              <div class="row">
-                <div class="col-xl-6">
-                  <div class="form-group disabled">
-                    <div class="mb-2">Company address<span class="text-red">*</span></div>
-                    <input type="text" class="form-control" placeholder="52 King Abdullah Rd, Riyadh" name="firstname" disabled>
-                  </div>
+              <div class="row mt-2 pb-3">
+                <div class="col-auto">
+                  <label class="check-group checkbox-group">
+                    <input type="checkbox">
+                    <div>Sign up as a company</div>
+                  </label>
                 </div>
               </div>
               <div class="row align-items-center mt-4">
                 <div class="col-sm-auto">
-                  <a href="#!" class="btn btn-primary btn-sign btn-edit ml-0 fz-18 d-block d-sm-inline-block py-2">Save account changes</a>
-                </div>
-                <div class="col-sm-auto text-center mt-3 mt-sm-0">
-                  <a href="#!" class="see-all see-all-2 fz-18">Cancel edits</a>
+                  <a href="#!" class="btn btn-success btn-sign ml-0 fz-18 py-2 d-block d-sm-inline-block">Confrim and start bidding</a>
                 </div>
               </div>
             </form>

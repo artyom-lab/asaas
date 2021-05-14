@@ -10,7 +10,7 @@ $(function() {
     navText: ["", ""]
   });
 
-  Waves.attach('.btn, .owl-prev, .owl-next, .watch, #file-drag');
+  Waves.attach('.btn, .owl-prev, .owl-next, .watch');
   Waves.attach('.btn', ['waves-light']);
   Waves.init();
 
