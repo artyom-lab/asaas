@@ -64,6 +64,15 @@ input
 .text-black
 	color: #2A2A2A !important
 
+.text-gray
+	color: #66666C !important
+
+.text-gray-2
+	color: #888893 
+
+.text-gray-3
+	color: #535353 !important
+
 .navbar 
 	padding: 12px 16px
 	background-color: #FFF
@@ -374,12 +383,22 @@ hr
 		background-color: #FCFCFC
 	&.error
 		border-color: #EF6A82
+		~ .row
+			.the-count
+				color: #EF6A82
 
 .form-group
+	color: #535353
+	.confirmed 
+		color: #888893 
 	&.disabled
 		color: #B7B7BD
+		.confirmed 
+			color: #B7B7BD 
 
 label
+	&.error 
+		display: none !important
 	&.check-group
 		font-size: 18px
 		display: block
@@ -452,49 +471,100 @@ label
 	font-size: 18px
 
 .uploader-plugin
-	.btn-orange
-		background-color: transparent
-		border-color: #EEEEF0 !important
-		color: #1F687E
-		text-align: left
-		font-size: 18px
-		width: 100%
-		font-weight: 500
-		&:hover 
-			background: #FCFCFC
-		img 
-			width: 30px
-	.fileUpload
-		position: relative
-		overflow: hidden
-		height: 45px
+	position: relative
+	overflow: hidden
+	border-radius: .25rem
+	transition: $transition
+	&:hover 
+		background: #FCFCFC
 	input.upload
 		position: absolute
 		top: 0
 		right: 0
+		bottom: 0
+		left: 0
 		margin: 0
 		padding: 0
 		font-size: 20px
-		cursor: pointer
 		opacity: 0
 		filter: alpha(opacity = 0)
+		&.error 
+			~ .fileUpload
+				border-color: #EF6A82
+	.fileUpload
+		padding: 6px 13px
+		height: 44px
+		font-size: 18px
+		transition: $transition
+		color: #1F687E
+		border: 1px solid #EEEEF0 
+		border-radius: .25rem
+		text-align: left
+		width: 100%
+		font-weight: 500
+		white-space: nowrap
+		text-overflow: ellipsis
+		padding-right: 45px
+		img 
+			width: 20px
+	.delete-small 
+		position: absolute
+		display: none
+		right: 13px
+		top: 50%
+		width: 20px
+		height: 20px
+		transform: translateY(-50%)
+		transition: $transition
+		.delete-2
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			opacity: 0
+			transition: $transition
+		&:hover
+			.delete-2
+				opacity: 1
+		img 
+			display: block
 
 .uploader 
 	label 
-		width: 100%
 		padding: 10px
-		min-height: 120px
-		min-width: 120px
+		height: 120px
+		width: 120px
 		text-align: center
 		border-radius: 4px
 		border: 1px solid #EEEEF0
 		transition: $transition
-		cursor: pointer
+		display: flex
+		flex-direction: column
+		overflow: hidden
 		&:hover 
 			background: #FCFCFC
 		&.file-upload 
 			padding: 0
-			border: 0
+			.delete-img
+				display: block
+			&:hover 
+				.delete-img
+					opacity: 1
+	.delete-img
+		display: none
+		opacity: 0
+		background: rgba(252, 252, 252, .94)
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		img
+			position: absolute
+			bottom: 50%
+			left: 50%
+			transform: translate(-50%, 50%)
 	#start 
 		padding: 22px 10px
 		&.hidden 
@@ -504,10 +574,9 @@ label
 			display: none
 		#messages 
 			display: none
-	#file-image 
-		display: inline
-		width: auto
-		height: auto
+	#file-image
+		margin: auto
+		max-height: 100%
 		&.hidden 
 			display: none
 	#notimage 
@@ -518,7 +587,15 @@ label
 		&.hidden 
 			display: none
 	input[type="file"] 
-		display: none
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		font-size: 0
+		pointer-events: none
+		&.error
+			~ label 
+				border-color: #EF6A82
 	div 
 		color: #1F687E
 		font-size: 18px
@@ -534,4 +611,7 @@ label
 .the-count
 	color: #888893
 	font-size: 14px
+	transition: $transition
 
+.block-company
+	display: none

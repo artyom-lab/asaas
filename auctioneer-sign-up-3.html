@@ -74,7 +74,7 @@
             </div>
             <div class="row">
               <div class="col-xl-8">
-                <p class="pb-3">In order to ensure fairness and reliability on the platform, we require auctioneers to provide their company information and license documents. Verification takes 1-3 business days and an Asaas team member might contact you for further details.</p>
+                <p class="pb-3 text-gray">In order to ensure fairness and reliability on the platform, we require auctioneers to provide their company information and license documents. Verification takes 1-3 business days and an Asaas team member might contact you for further details.</p>
               </div>
             </div>
             <form id="form">
@@ -83,14 +83,14 @@
                   <div class="form-group disabled">
                     <div class="mb-2">First name</div>
                     <input type="text" class="form-control" placeholder="Albus" name="firstname" disabled>
-                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                    <div class="fz-14 mt-2 confirmed">Confirmed through your government ID</div>
                   </div>
                 </div>
                 <div class="col-xl-6">
                   <div class="form-group disabled">
                     <div class="mb-2">Second name</div>
-                    <input type="text" class="form-control" placeholder="Severus" name="firstname" disabled>
-                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                    <input type="text" class="form-control" placeholder="Severus" name="secondname" disabled>
+                    <div class="fz-14 mt-2 confirmed">Confirmed through your government ID</div>
                   </div>
                 </div>
               </div>
@@ -98,15 +98,15 @@
                 <div class="col-xl-6">
                   <div class="form-group disabled">
                     <div class="mb-2">Third name</div>
-                    <input type="text" class="form-control" placeholder="Al" name="firstname" disabled>
-                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                    <input type="text" class="form-control" placeholder="Al" name="thirdname" disabled>
+                    <div class="fz-14 mt-2 confirmed">Confirmed through your government ID</div>
                   </div>
                 </div>
                 <div class="col-xl-6">
                   <div class="form-group disabled">
                     <div class="mb-2">Family name</div>
-                    <input type="text" class="form-control" placeholder="Potter" name="firstname" disabled>
-                    <div class="fz-14 mt-2">Confirmed through your government ID</div>
+                    <input type="text" class="form-control" placeholder="Potter" name="familyname" disabled>
+                    <div class="fz-14 mt-2 confirmed">Confirmed through your government ID</div>
                   </div>
                 </div>
               </div>
@@ -123,8 +123,8 @@
                 <div class="col-xl-6">
                   <div class="form-group">
                     <div class="mb-2">Company legal name<span class="text-red">*</span></div>
-                    <input type="text" class="form-control" placeholder="Awesome Auctions Co." name="firstname">
-                    <div class="fz-14 mt-2">As per your legal license. Example: Aweosome Auctions Co.</div>
+                    <input type="text" class="form-control" placeholder="Awesome Auctions Co." name="compname">
+                    <div class="fz-14 mt-2 confirmed">As per your legal license. Example: Aweosome Auctions Co.</div>
                   </div>
                 </div>
                 <div class="col-xl-6">
@@ -133,26 +133,28 @@
                       <div class="col">Company address<span class="text-red">*</span>
                       </div>
                     </div>
-                    <input type="text" class="form-control" placeholder="King Fahd Rd, Al Olaya, Riyadh 11564" name="firstname">
-                    <div class="fz-14 mt-2">Your company’s headquarters or legal addres</div>
+                    <input type="text" class="form-control" placeholder="King Fahd Rd, Al Olaya, Riyadh 11564" name="compadress">
+                    <div class="fz-14 mt-2 confirmed">Your company’s headquarters or legal addres</div>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xl-6">
                   <div class="form-group">
-                    <div class="row row-1 mb-2 align-items-center">
-                      <div class="col">Company registration number<span class="text-red">*</span>
-                      </div>
-                      <div class="col-auto fz-14">
-                        <div id="the-count" class="the-count">
-                          <span id="current">0</span>
-                          <span id="maximum">/8</span>
+                    <div class="d-flex flex-column-reverse">
+                      <input type="number" class="form-control" placeholder="1010584421" id="count-eight" maxlength="8" name="registrationnumber">
+                      <div class="row row-1 mb-2 align-items-center">
+                        <div class="col">Company registration number<span class="text-red">*</span>
+                        </div>
+                        <div class="col-auto fz-14">
+                          <div id="the-count" class="the-count">
+                            <span id="current">0</span>
+                            <span id="maximum">/8</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <input type="number" class="form-control" placeholder="1010584421" id="count-eight" maxlength="8" name="registrationnumber">
-                    <div class="fz-14 mt-2">Your license registration number found on your X10C certificate</div>
+                    <div class="fz-14 mt-2 confirmed">Your license registration number found on your X10C certificate</div>
                   </div>
                 </div>
                 <div class="col-xl-6">
@@ -172,7 +174,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="fz-14 mt-2">Please upload your X5-C auction certificate as pdf, png, or jpeg image</div>
+                    <div class="fz-14 mt-2 confirmed">Please upload your X5-C auction certificate as pdf, png, or jpeg image</div>
                   </div>
                 </div>
               </div>
@@ -184,8 +186,8 @@
                       <div class="col">Company display name<span class="text-red">*</span>
                       </div>
                     </div>
-                    <input type="text" class="form-control" placeholder="Awesome Auctions" name="firstname">
-                    <div class="fz-14 mt-2">Use your company’s brand or shorthand name. Example: Awesome Auctions</div>
+                    <input type="text" class="form-control" placeholder="Awesome Auctions" name="displayname">
+                    <div class="fz-14 mt-2 confirmed">Use your company’s brand or shorthand name. Example: Awesome Auctions</div>
                   </div>
                   <div class="form-group">
                     <div class="row row-1 mb-3 align-items-center">
@@ -210,7 +212,7 @@
                         </div>           
                       </div>
                       <div class="col-sm-6 col-lg-8 mt-3 mt-sm-0">
-                        <div class="fz-14">
+                        <div class="fz-14 confirmed">
                           <p>Please upload your comapny’s icon or emblem. This image will be displayed on your auctions.</p>
                           <p>For ideal results upload a 400x400 square jpeg file.</p>
                         </div>
@@ -220,24 +222,26 @@
                 </div>
                 <div class="col-xl-6">
                   <div class="form-group">
-                    <div class="row row-1 mb-2 align-items-center">
-                      <div class="col">Company description<span class="text-red">*</span>
-                      </div>
-                      <div class="col-auto fz-14">
-                        <div id="the-count-200" class="the-count">
-                          <span id="current-200">0</span>
-                          <span id="maximum-200">/200</span>
+                    <div class="d-flex flex-column-reverse">
+                      <textarea type="text" class="form-control form-textarea" placeholder="At Awesome auctions we are focused on developing the regions" name="description" id="count-200" maxlength="200"></textarea>
+                      <div class="row row-1 mb-2 align-items-center">
+                        <div class="col">Company description<span class="text-red">*</span>
+                        </div>
+                        <div class="col-auto fz-14">
+                          <div id="the-count-200" class="the-count">
+                            <span id="current-200">0</span>
+                            <span id="maximum-200">/200</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <textarea type="text" class="form-control form-textarea" placeholder="At Awesome auctions we are focused on developing the regions" name="description" id="count-200" maxlength="200"></textarea>
-                    <div class="fz-14 mt-2">This description will be displayed on your auctions</div>
+                    <div class="fz-14 mt-2 confirmed">This description will be displayed on your auctions</div>
                   </div>
                 </div>
               </div>
               <div class="row align-items-center mt-4">
                 <div class="col-sm-auto">
-                  <a href="#!" class="btn btn-success btn-sign ml-0 fz-18 py-2 d-block d-sm-inline-block">Submit your registration for approval</a>
+                  <button class="btn btn-success btn-sign ml-0 fz-18 py-2 d-block d-sm-inline-block">Submit your registration for approval</button>
                 </div>
               </div>
             </form>

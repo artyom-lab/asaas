@@ -10,7 +10,7 @@ $(function() {
     navText: ["", ""]
   });
 
-  Waves.attach('.btn, .owl-prev, .owl-next, .watch');
+  Waves.attach('.btn-sign, .btn-edit, .owl-prev, .owl-next, .watch');
   Waves.attach('.btn', ['waves-light']);
   Waves.init();
 
@@ -35,6 +35,30 @@ $(function() {
         required: true,
         minlength: 2
       },
+      secondname: {
+        required: true,
+        minlength: 2
+      },
+      thirdname: {
+        required: true,
+        minlength: 2
+      },
+      familyname: {
+        required: true,
+        minlength: 2
+      },
+      compname: {
+        required: true,
+        minlength: 2
+      },
+      compadress: {
+        required: true,
+        minlength: 2
+      },
+      displayname: {
+        required: true,
+        minlength: 2
+      },
       email: {
         required: true,
         minlength: 6
@@ -54,6 +78,12 @@ $(function() {
         minlength: 1,
         maxlength: 200,
       },
+      upload: {
+        required: true,
+      },
+      fileUpload: {
+        required: true,
+      },
     },
 
     submitHandler: function(form) {
@@ -61,6 +91,7 @@ $(function() {
         e.preventDefault();
       });
     }
+
   });
 
   $('#count-eight').keyup(function() {  
@@ -87,65 +118,40 @@ $(function() {
     current.text(characterCount);
   });
 
-  var fileTypes = ['pdf', 'docx', 'rtf', 'jpg', 'jpeg', 'png', 'txt']; //acceptable file types
-  function readURL(input) {
-      if (input.files && input.files[0]) {
-          var extension = input.files[0].name.split('.').pop().toLowerCase(), //file extension from input file
-              isSuccess = fileTypes.indexOf(extension) > -1; //is extension in acceptable types
-          if (isSuccess) { //yes
-              var reader = new FileReader();
-              reader.onload = function(e) {
-                  if (extension == 'pdf') {
-                      $(input).closest('.fileUpload').find(".icon").attr('src', 'https://image.flaticon.com/icons/svg/179/179483.svg');
-                  } else if (extension == 'docx') {
-                      $(input).closest('.fileUpload').find(".icon").attr('src', 'https://image.flaticon.com/icons/svg/281/281760.svg');
-                  } else if (extension == 'rtf') {
-                      $(input).closest('.fileUpload').find(".icon").attr('src', 'https://image.flaticon.com/icons/svg/136/136539.svg');
-                  } else if (extension == 'png') {
-                      $(input).closest('.fileUpload').find(".icon").attr('src', 'https://image.flaticon.com/icons/svg/136/136523.svg');
-                  } else if (extension == 'jpg' || extension == 'jpeg') {
-                      $(input).closest('.fileUpload').find(".icon").attr('src', 'https://image.flaticon.com/icons/svg/136/136524.svg');
-                  } else if (extension == 'txt') {
-                      $(input).closest('.fileUpload').find(".icon").attr('src', 'https://image.flaticon.com/icons/svg/136/136538.svg');
-                  } else {
-                      //console.log('here=>'+$(input).closest('.uploadDoc').length);
-                      $(input).closest('.uploadDoc').find(".docErr").slideUp('slow');
-                  }
-              }
-
-              reader.readAsDataURL(input.files[0]);
-          } else {
-              //console.log('here=>'+$(input).closest('.uploadDoc').find(".docErr").length);
-              $(input).closest('.uploadDoc').find(".docErr").fadeIn();
-              setTimeout(function() {
-                  $('.docErr').fadeOut('slow');
-              }, 9000);
-          }
-      }
-  }
-  $(document).ready(function() {
-      $(document).on('change', '.up', function() {
-          var id = $(this).attr('id'); /* gets the filepath and filename from the input */
-          var profilePicValue = $(this).val();
-          var fileNameStart = profilePicValue.lastIndexOf('\\'); /* finds the end of the filepath */
-          profilePicValue = profilePicValue.substr(fileNameStart + 1).substring(0, 20); /* isolates the filename */
-          //var profilePicLabelText = $(".upl"); /* finds the label text */
-          if (profilePicValue != '') {
-              //console.log($(this).closest('.fileUpload').find('.upl').length);
-              $(this).closest('.fileUpload').find('.upl').html(profilePicValue); /* changes the label text */
-          }
-      });
+  $('#switcher').change(function() { 
+    var blockPerson = $(".block-person");
+    var blockCompany = $(".block-company");
+    if ($(this).is(':checked')) {
+      blockPerson.hide();
+      blockCompany.show();
+    } else {
+      blockPerson.show();
+      blockCompany.hide();
+    };
   });
 
+  $(document).on('change', '.up', function() {
+    var profilePicValue = $(this).val();
+    var fileNameStart = profilePicValue.lastIndexOf('\\'); /* finds the end of the filepath */
+    profilePicValue = profilePicValue.substr(fileNameStart + 1).substring(0, 20); /* isolates the filename */
+    //var profilePicLabelText = $(".upl"); /* finds the label text */
+    if (profilePicValue != '') {
+      //console.log($(this).closest('.fileUpload').find('.upl').length);
+      $(this).siblings('.fileUpload').find('.upl').html(profilePicValue); /* changes the label text */
+      $(this).siblings('.delete-small').show();
+    };
+  });
+  $(".delete-small").click(function() {
+    $(this).hide().siblings(".up").val("").siblings(".fileUpload").find('.upl').html("Upload your auction license certificate");
+  });
 
-function ekUpload(){
+function ekUpload() {
   function Init() {
 
     console.log("Upload Initialised");
 
     var fileSelect    = document.getElementById('file-upload'),
-        fileDrag      = document.getElementById('file-drag'),
-        submitButton  = document.getElementById('submit-button');
+        fileDrag      = document.getElementById('file-drag');
 
     fileSelect.addEventListener('change', fileSelectHandler, false);
 
@@ -203,17 +209,17 @@ function ekUpload(){
     var isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(imageName);
     if (isGood) {
       document.getElementById('start').classList.add("hidden");
-      document.getElementById('response').classList.remove("hidden");
       document.getElementById('notimage').classList.add("hidden");
+      document.getElementById('response').classList.remove("hidden");
       // Thumbnail Preview
       document.getElementById('file-image').classList.remove("hidden");
       document.getElementById('file-image').src = URL.createObjectURL(file);
     }
     else {
-      document.getElementById('file-image').classList.add("hidden");
-      document.getElementById('notimage').classList.remove("hidden");
       document.getElementById('start').classList.remove("hidden");
+      document.getElementById('notimage').classList.remove("hidden");
       document.getElementById('response').classList.add("hidden");
+      document.getElementById('file-image').classList.add("hidden");
       document.getElementById("file-upload-form").reset();
     }
   }
@@ -275,6 +281,18 @@ function ekUpload(){
   }
 }
 ekUpload();
+
+$(".delete-img").click(function() {
+  document.getElementById('start').classList.remove("hidden");
+  document.getElementById('notimage').classList.add("hidden");
+  document.getElementById('response').classList.add("hidden");
+  document.getElementById('file-image').classList.add("hidden");
+  document.getElementById('file-image').classList.add("hidden");
+  document.getElementById('file-image').src = "#!";
+  $("#file-drag").removeClass("modal-body").removeClass("file-upload");
+  $("#file-upload").val("");
+  // $(this).hide().siblings(".up").val("").siblings(".fileUpload").find('.upl').html("Upload your auction license certificate");
+});
 
 });
 
