@@ -164,15 +164,15 @@
                       </div>
                     </div>
                     <div class="uploader-plugin">
-                      <div id="uploader">
-                        <div class="uploadDoc">
-                          <div class="fileUpload btn btn-orange">
-                            <img src="img/upload.svg" class="icon">
-                            <span class="upl" id="upload">Upload your auction license certificate</span>
-                            <input type="file" class="upload up" id="up" onchange="readURL(this);"/>
-                          </div>
-                        </div>
+                      <input type="file" class="upload up" name="upload"/>
+                      <div class="fileUpload">
+                        <img src="img/upload.svg" class="icon">
+                        <span class="upl">Upload your auction license certificate</span>
                       </div>
+                      <a href="#!" class="delete-small">
+                        <img src="img/delete.svg" alt="">
+                        <img src="img/delete-2.svg" alt="" class="delete-2">
+                      </a>
                     </div>
                     <div class="fz-14 mt-2 confirmed">Please upload your X5-C auction certificate as pdf, png, or jpeg image</div>
                   </div>
@@ -198,7 +198,7 @@
                       <div class="col-sm-6 col-lg-4">
                         <div id="file-upload-form" class="uploader">
                           <input id="file-upload" type="file" name="fileUpload" accept="image/*"/>
-                          <label for="file-upload" id="file-drag">
+                          <label for="file-upload" id="file-drag" class="position-relative">
                             <img id="file-image" src="#!" alt="Preview" class="hidden">
                             <div id="start">
                               <i class="bg-upload" aria-hidden="true"></i>
@@ -208,6 +208,9 @@
                             <div id="response" class="hidden">
                               <div id="messages"></div>
                             </div>
+                            <a href="#!" class="delete-img">
+                              <img src="img/delete.svg" alt="">
+                            </a>
                           </label>
                         </div>           
                       </div>
