@@ -36,8 +36,6 @@ body {
 a {
   text-decoration: none !important;
   transition: 0.3s; }
-  a.black:hover {
-    color: #000; }
 
 input[type=radio], input[type=checkbox] {
   display: none; }
@@ -62,7 +60,7 @@ input[type=number] {
   color: #66666C !important; }
 
 .text-gray-2 {
-  color: #888893; }
+  color: #888893 !important; }
 
 .text-gray-3 {
   color: #535353 !important; }
@@ -72,7 +70,7 @@ input[type=number] {
   background-color: #FFF;
   box-shadow: 0px 0px 10px rgba(164, 164, 164, 0.15), 0px 0.5px 0px #C8C8C8; }
   .navbar .navbar-brand {
-    font-size: 0; }
+    font-size: 0px; }
     .navbar .navbar-brand img {
       width: 180px; }
       @media (max-width: 575.98px) {
@@ -84,7 +82,7 @@ input[type=number] {
     font-size: 16px;
     display: inline-block;
     padding: 8px 14px !important;
-    font-weight: bold; }
+    font-weight: 700; }
     .navbar .nav-link.text-red {
       color: #EF6A82 !important; }
     .navbar .nav-link:after {
@@ -124,17 +122,17 @@ input[type=number] {
 
 .h2, h2 {
   font-size: 40px;
-  font-weight: bold; }
+  font-weight: 700; }
 
 .h3, h3 {
   font-size: 24px;
-  font-weight: bold; }
+  font-weight: 700; }
 
 .h5, h5 {
   font-size: 19px; }
 
 .fz-0 {
-  font-size: 0; }
+  font-size: 0px; }
 
 .fz-9 {
   font-size: 9px; }
@@ -260,8 +258,8 @@ hr {
   background-clip: border-box; }
   .watch-container .watch {
     position: absolute;
-    font-weight: bold;
-    font-size: 0;
+    font-weight: 700;
+    font-size: 0px;
     top: 16px;
     left: 16px;
     padding: 4px 8px;
@@ -269,7 +267,7 @@ hr {
     border: 1px solid #888893;
     background: rgba(255, 255, 255, 0.75);
     transition: 0.3s;
-    color: #000; }
+    color: #2A2A2A; }
     @media (min-width: 1200px) {
       .watch-container .watch {
         opacity: 0; } }
@@ -279,7 +277,7 @@ hr {
 .owl-1.owl-theme .owl-nav {
   margin-top: 0; }
 .owl-1.owl-theme .owl-dots {
-  font-size: 0;
+  font-size: 0px;
   bottom: 8%;
   z-index: 10;
   position: absolute;
@@ -318,7 +316,7 @@ hr {
     vertical-align: middle;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 0; }
+    font-size: 0px; }
   .owl-1 .owl-nav [class*=owl-].owl-prev {
     background-image: url(../img/owl-prev.svg);
     left: 4%; }
@@ -569,7 +567,7 @@ label.checkbox-group {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 0;
+  font-size: 0px;
   pointer-events: none; }
   .uploader input[type="file"].error ~ label {
     border-color: #EF6A82; }

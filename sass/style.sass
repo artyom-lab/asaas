@@ -19,6 +19,40 @@
 	src: url('../fonts/URWGeometric-Bold.woff2')
 	font-weight: bold
 
+$URWLight: 'URWGeometric-Light', sans-serif
+$URWRegular: 'URWGeometric-Regular', sans-serif
+$URWMedium: 'URWGeometric-Medium', sans-serif
+$URWSemiBold: 'URWGeometric-SemiBold', sans-serif
+$URWBold: 'URWGeometric-Bold', sans-serif
+
+$color-blue: #1F687E
+$color-blue-2: #165366
+$color-checked: #448FFF
+$color-red: #EF6A82
+$color-black: #2A2A2A
+$color-gray-1: #66666C
+$color-gray-2: #888893
+$color-gray-3: #535353
+$color-white: #FFF
+$color-white-2: #FCFCFC
+$color-pink: #FFC5AE
+$color-hr: #EEEEF0
+$color-green: #24997D
+$color-green-2: #218C73
+$color-card: #E0E0E0
+
+$font-weight-500: 500
+$font-weight-600: 600
+$font-weight-700: 700
+
+$fz-0: 0px
+$fz-9: 9px
+$fz-14: 14px
+$fz-16: 16px
+$fz-18: 18px
+
+$box: 0px 0px 10px rgba(164, 164, 164, 0.15), 0px 0.5px 0px #C8C8C8
+
 $transition: .3s
 
 * 
@@ -29,19 +63,16 @@ img
 	height: auto
 
 body 
-	font-family: 'URWGeometric-Regular', sans-serif
-	background-color: #FCFCFC
+	font-family: $URWRegular
+	background-color: $color-white-2
 	display: flex
-	color: #2A2A2A
+	color: $color-black
 	flex-direction: column
 	min-height: 100vh
 
 a 
 	text-decoration: none !important
-	transition: .3s
-	&.black 
-		&:hover 
-			color: #000
+	transition: $transition
 
 input
 	&[type=radio], &[type=checkbox]
@@ -56,42 +87,42 @@ input
 		max-width: 1200px
 
 .text-blue 
-	color: #1F687E !important
+	color: $color-blue !important
 
 .text-red
-	color: #EF6A82 !important
+	color: $color-red !important
 
 .text-black
-	color: #2A2A2A !important
+	color: $color-black !important
 
 .text-gray
-	color: #66666C !important
+	color: $color-gray-1 !important
 
 .text-gray-2
-	color: #888893 
+	color: $color-gray-2 !important
 
 .text-gray-3
-	color: #535353 !important
+	color: $color-gray-3 !important
 
 .navbar 
 	padding: 12px 16px
-	background-color: #FFF
-	box-shadow: 0px 0px 10px rgba(164, 164, 164, 0.15), 0px 0.5px 0px #C8C8C8
+	background-color: $color-white
+	box-shadow: $box
 	.navbar-brand 
-		font-size: 0
+		font-size: $fz-0
 		img
 			width: 180px
 			@media (max-width: 575.98px)
 				width: 160px
 	.nav-link 
 		position: relative
-		color: #1F687E !important
-		font-size: 16px
+		color: $color-blue !important
+		font-size: $fz-16
 		display: inline-block
 		padding: 8px 14px !important
-		font-weight: bold
+		font-weight: $font-weight-700
 		&.text-red
-			color: #EF6A82 !important
+			color: $color-red !important
 		&:after 
 			content: ""
 			position: absolute
@@ -99,14 +130,14 @@ input
 			left: 50%
 			width: 0
 			border: 0
-			border-bottom: 3px solid #FFC5AE
-			transition: 0.3s
+			border-bottom: 3px solid $color-pink
+			transition: $transition
 			margin-left: 0
 			max-width: 26px
 			transform: translateX(-50%)
 		&:hover, &.active
 			opacity: 1
-			color: #165366
+			color: $color-blue-2
 			&:after
 				width: calc(100% - 50px)
 
@@ -127,61 +158,61 @@ input
 		padding-right: 8px
 
 .h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6
-	font-family: 'URWGeometric-Regular', sans-serif
+	font-family: $URWRegular
 
 .h2, h2
 	font-size: 40px
-	font-weight: bold 
+	font-weight: $font-weight-700 
 
 .h3, h3
 	font-size: 24px
-	font-weight: bold 
+	font-weight: $font-weight-700 
 
 .h5, h5
 	font-size: 19px
 
 .fz-0	
-	font-size: 0
+	font-size: $fz-0
 .fz-9	
-	font-size: 9px
+	font-size: $fz-9
 .fz-14
-	font-size: 14px !important
+	font-size: $fz-14 !important
 .fz-16
-	font-size: 16px !important
+	font-size: $fz-16 !important
 .fz-18
-	font-size: 18px
+	font-size: $fz-18
 
 .lh-1
 	line-height: 1
 
 hr 
-	border-color: #EEEEF0
+	border-color: $color-hr
 
 .btn-sign
 	margin-left: 10px
-	background: #24997D
+	background: $color-green
 	transition: $transition
 	border: 0
-	font-weight: 500
+	font-weight: $font-weight-500
 	&:hover 
-		background: #218C73
+		background: $color-green-2
 	&:focus 
 		box-shadow: none
 
 .btn-edit
-	background: #1F687E
-	font-weight: 500
+	background: $color-blue
+	font-weight: $font-weight-500
 	&:hover 
-		background: #1F687E
+		background: $color-blue
 
 .sandwich
 	display: inline-block
-	color: #1F687E
+	color: $color-blue
 	cursor: pointer
 	transition: none
 	padding: 0
 	border: 0
-	background-color: #FFF
+	background-color: $color-white
 	&:hover 
 		opacity: .6
 	&:before
@@ -198,7 +229,7 @@ hr
 		display: block
 		transition: $transition
 		transform-origin: right center
-		border-top: 1px solid #1F687E
+		border-top: 1px solid $color-blue
 		margin-left: auto
 	&:not(.collapsed)
 		&:before
@@ -215,12 +246,12 @@ hr
 
 .see-all 
 	display: inline-block
-	color: #1F687E
-	font-size: 18px
-	font-weight: 600
+	color: $color-blue
+	font-size: $fz-18
+	font-weight: $font-weight-600
 	&:hover
 		opacity: 1
-		color: #165366
+		color: $color-blue-2
 		transform: translateX(5px)
 
 .see-all-2
@@ -234,7 +265,7 @@ hr
 
 .card-2
 	height: 100%
-	border: 1px solid #E0E0E0
+	border: 1px solid $color-card
 	border-radius: 8px
 	overflow: hidden
 	.card-block
@@ -245,7 +276,7 @@ hr
 
 .footer 
 	padding: 80px 0 120px
-	background: #165366
+	background: $color-blue-2
 	margin-top: auto
 	@media (max-width: 991.98px)
 		padding: 48px 0
@@ -265,16 +296,16 @@ hr
 	background-clip: border-box
 	.watch 
 		position: absolute
-		font-weight: bold
-		font-size: 0
+		font-weight: $font-weight-700
+		font-size: $fz-0
 		top: 16px
 		left: 16px
 		padding: 4px 8px
 		border-radius: 100px
-		border: 1px solid #888893
+		border: 1px solid $color-gray-2
 		background: rgba(255, 255, 255, 0.75)
 		transition: $transition
-		color: #000
+		color: $color-black
 		@media (min-width: 1200px)
 			opacity: 0
 	&:hover 
@@ -286,7 +317,7 @@ hr
 		.owl-nav 
 			margin-top: 0
 		.owl-dots
-			font-size: 0
+			font-size: $fz-0
 			bottom: 8%
 			z-index: 10
 			position: absolute
@@ -300,7 +331,7 @@ hr
 					margin: 5px
 					width: 8px
 					height: 8px
-					background: #FFF
+					background: $color-white
 					opacity: .7
 					transition: $transition
 				&:hover
@@ -329,7 +360,7 @@ hr
 				vertical-align: middle	
 				top: 50%
 				transform: translateY(-50%)
-				font-size: 0
+				font-size: $fz-0
 			&.owl-prev
 				background-image: url(../img/owl-prev.svg)
 				left: 4%
@@ -355,7 +386,7 @@ hr
 		padding-bottom: 50px
 
 .card-signup
-	border: 1px solid #E0E0E0
+	border: 1px solid $color-card
 	padding: 80px
 	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05)
 	border-radius: 16px
@@ -367,30 +398,30 @@ hr
 .form-control
 	padding: 10px 13px
 	height: 44px
-	font-size: 18px
+	font-size: $fz-18
 	transition: $transition
-	color: #888893
-	border: 1px solid #EEEEF0
+	color: $color-gray-2
+	border: 1px solid $color-hr
 	&:hover 
-		background: #FCFCFC
+		background: $color-white-2
 	&:focus
 		border-color: #B7B7BD
-		color: #2A2A2A
+		color: $color-black
 		box-shadow: none
 	&:disabled
-		border-color: #EEEEF0
+		border-color: $color-hr
 		color: #B7B7BD
-		background-color: #FCFCFC
+		background-color: $color-white-2
 	&.error
-		border-color: #EF6A82
+		border-color: $color-red
 		~ .row
 			.the-count
-				color: #EF6A82
+				color: $color-red
 
 .form-group
-	color: #535353
+	color: $color-gray-3
 	.confirmed 
-		color: #888893 
+		color: $color-gray-2 
 	&.disabled
 		color: #B7B7BD
 		.confirmed 
@@ -400,14 +431,14 @@ label
 	&.error 
 		display: none !important
 	&.check-group
-		font-size: 18px
+		font-size: $fz-18
 		display: block
 		margin-bottom: 0
 		position: relative
 		cursor: pointer
 		line-height: 1.4
 		transition: $transition
-		color: #888893
+		color: $color-gray-2
 		div:before
 			content: ''
 			position: absolute
@@ -420,10 +451,10 @@ label
 			background-position: center center
 			background-repeat: no-repeat
 			background-size: 10px
-			transition: .3s
+			transition: $transition
 		input
 			&:checked ~ div:before
-				border-color: #448FFF
+				border-color: $color-checked
 				border-radius: 6px
 	&.checkbox-group
 		padding-left: 30px
@@ -431,10 +462,10 @@ label
 			border-radius: 4px
 			width: 20px
 			height: 20px
-			border-color: #888893
+			border-color: $color-gray-2
 		input
 			&:checked ~ div
-				color: #2A2A2A
+				color: $color-black
 				&:before
 					background-image: url(../img/check-square.svg)
 					background-size: cover
@@ -468,7 +499,7 @@ label
 	height: 180px !important
 	resize: none
 	padding: 10px
-	font-size: 18px
+	font-size: $fz-18
 
 .uploader-plugin
 	position: relative
@@ -476,7 +507,7 @@ label
 	border-radius: .25rem
 	transition: $transition
 	&:hover 
-		background: #FCFCFC
+		background: $color-white-2
 	input.upload
 		position: absolute
 		top: 0
@@ -490,18 +521,18 @@ label
 		filter: alpha(opacity = 0)
 		&.error 
 			~ .fileUpload
-				border-color: #EF6A82
+				border-color: $color-red
 	.fileUpload
 		padding: 6px 13px
 		height: 44px
-		font-size: 18px
+		font-size: $fz-18
 		transition: $transition
-		color: #1F687E
-		border: 1px solid #EEEEF0 
+		color: $color-blue
+		border: 1px solid $color-hr 
 		border-radius: .25rem
 		text-align: left
 		width: 100%
-		font-weight: 500
+		font-weight: $font-weight-500
 		white-space: nowrap
 		text-overflow: ellipsis
 		padding-right: 45px
@@ -537,13 +568,13 @@ label
 		width: 120px
 		text-align: center
 		border-radius: 4px
-		border: 1px solid #EEEEF0
+		border: 1px solid $color-hr
 		transition: $transition
 		display: flex
 		flex-direction: column
 		overflow: hidden
 		&:hover 
-			background: #FCFCFC
+			background: $color-white-2
 		&.file-upload 
 			padding: 0
 			.delete-img
@@ -591,14 +622,14 @@ label
 		position: absolute
 		top: 0
 		left: 0
-		font-size: 0
+		font-size: $fz-0
 		pointer-events: none
 		&.error
 			~ label 
-				border-color: #EF6A82
+				border-color: $color-red
 	div 
-		color: #1F687E
-		font-size: 18px
+		color: $color-blue
+		font-size: $fz-18
 
 .bg-upload
 	display: inline-block
@@ -609,8 +640,8 @@ label
 	height: 20px
 
 .the-count
-	color: #888893
-	font-size: 14px
+	color: $color-gray-2
+	font-size: $fz-14
 	transition: $transition
 
 .block-company
