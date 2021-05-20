@@ -18,12 +18,17 @@
 	font-family: 'URWGeometric-Bold'
 	src: url('../fonts/URWGeometric-Bold.woff2')
 	font-weight: bold
+@font-face
+	font-family: 'Avenir-Arabic'
+	src: url('../fonts/Avenir-Arabic.ttf')
+	font-weight: 800
 
 $URWLight: 'URWGeometric-Light', sans-serif
 $URWRegular: 'URWGeometric-Regular', sans-serif
 $URWMedium: 'URWGeometric-Medium', sans-serif
 $URWSemiBold: 'URWGeometric-SemiBold', sans-serif
 $URWBold: 'URWGeometric-Bold', sans-serif
+$Avenir-Arabic: 'Avenir-Arabic', sans-serif
 
 $color-blue: #1F687E
 $color-blue-2: #165366
@@ -33,6 +38,8 @@ $color-black: #2A2A2A
 $color-gray-1: #66666C
 $color-gray-2: #888893
 $color-gray-3: #535353
+$color-disabled: #B7B7BD
+$color-gray-pagination: #F5F5F7
 $color-white: #FFF
 $color-white-2: #FCFCFC
 $color-pink: #FFC5AE
@@ -89,6 +96,9 @@ input
 .text-blue 
 	color: $color-blue !important
 
+.text-green 
+	color: $color-green !important
+
 .text-red
 	color: $color-red !important
 
@@ -135,9 +145,10 @@ input
 			margin-left: 0
 			max-width: 26px
 			transform: translateX(-50%)
-		&:hover, &.active
+		&:hover
 			opacity: 1
-			color: $color-blue-2
+			color: $color-blue-2 !important
+		&.active
 			&:after
 				width: calc(100% - 50px)
 
@@ -156,6 +167,29 @@ input
 	> [class*='col']
 		padding-left: 8px
 		padding-right: 8px
+
+.row-2
+	@media (min-width: 1200px)
+		margin-left: -20px
+		margin-right: -20px
+		> [class*='col']
+			padding-left: 20px
+			padding-right: 20px
+
+.row-3
+	@media (min-width: 1200px)
+		margin-left: -30px
+		margin-right: -30px
+		> [class*='col']
+			padding-left: 30px
+			padding-right: 30px
+
+.row-4
+	margin-left: -3px
+	margin-right: -3px
+	> [class*='col']
+		padding-left: 3px
+		padding-right: 3px
 
 .h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6
 	font-family: $URWRegular
@@ -181,9 +215,13 @@ input
 	font-size: $fz-16 !important
 .fz-18
 	font-size: $fz-18
+.fz-32
+	font-size: 32px
 
 .lh-1
 	line-height: 1
+.lh-12
+	line-height: 1.2
 
 hr 
 	border-color: $color-hr
@@ -198,6 +236,9 @@ hr
 		background: $color-green-2
 	&:focus 
 		box-shadow: none
+	&[disabled]
+		background: $color-hr
+		color: $color-disabled
 
 .btn-edit
 	background: $color-blue
@@ -258,6 +299,11 @@ hr
 	&:hover
 		transform: translateX(0)
 
+.see-all-back
+	font-size: $fz-14
+	&:hover
+		transform: translateX(-5px)
+
 .a-property
 	color: #000
 	&:hover 
@@ -268,11 +314,14 @@ hr
 	border: 1px solid $color-card
 	border-radius: 8px
 	overflow: hidden
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05)
 	.card-block
 		padding: 10px 16px 32px
 		height: 100%
 		display: flex
 		flex-direction: column
+	&.past
+		opacity: .5
 
 .footer 
 	padding: 80px 0 120px
@@ -646,3 +695,177 @@ label
 
 .block-company
 	display: none
+
+.bg-img
+	background-size: cover
+	background-position: center center
+	height: auto
+
+.bg-img-460
+	height: 460px
+	@media (max-width: 575.98px)
+		height: 290px
+
+.bg-img-112
+	height: 112px
+
+.bg-img-radius
+	border-radius: 8px
+	overflow: hidden
+
+.radius-bottom-8
+	overflow: hidden
+	border-bottom-left-radius: 8px
+	border-bottom-right-radius: 8px
+
+.a-bid
+	color: initial
+	h3 
+		transition: $transition
+	&:hover 
+		color: initial
+		h3
+			opacity: .7
+
+.closed
+	opacity: .5
+	.a-bid
+		&:hover 
+			h3 
+				opacity: 1
+
+.pill
+	display: inline-block
+	font-size: $fz-14
+	padding: 0 4px
+	color: $color-white
+	border-radius: 4px
+	&.pill-blue
+		background: $color-blue
+	&.pill-green
+		background: $color-green
+	&.pill-red
+		background: $color-red
+	&.pill-closed
+		background: $color-hr
+		color: $color-black
+		font-weight: $font-weight-600
+
+.pagination 
+	.page-item
+		&:not(:last-child)
+			margin-right: 16px
+		.page-link 
+			color: $color-black
+			background: $color-gray-pagination
+			font-size: 24px
+			font-weight: $font-weight-700
+			padding: 5px
+			width: 40px
+			height: 40px
+			border-radius: 8px
+			text-align: center
+			border: 0
+			font-family: $Avenir-Arabic
+			&:hover, &.active
+				background: $color-blue
+				color: $color-white
+				opacity: 1
+			&:focus 
+				box-shadow: none
+			@media (max-width: 575.98px)
+				font-size: 16px
+				width: 30px
+				height: 30px
+
+.btn-watch
+	display: flex
+	align-items: center
+	color: $color-blue
+	border: 1px solid $color-gray-pagination
+	border-radius: 4px
+	font-size: $fz-14
+	font-weight: bold
+	padding: 2px 10px
+	&:hover 
+		background: $color-white
+		color: $color-blue-2
+	&:focus 
+		box-shadow: none
+
+.address
+	padding-top: 8px
+	padding-bottom: 16px
+	&:not(:last-child)
+		border-bottom: 1px solid $color-hr
+
+.block-gray
+	background: $color-white-2
+	padding: 24px
+	border: 1px solid $color-hr
+	@media (max-width: 575.98px)
+		padding: 15px
+
+.my-40
+	margin-top: 40px
+	margin-bottom: 40px
+
+.base-img
+	border-radius: 4px
+	overflow: hidden
+
+.bid-block
+	padding: 40px
+	border-radius: 8px
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.02)
+	border: 1px solid $color-card
+	color: $color-gray-3
+	@media (max-width: 575.98px)
+		padding: 15px
+
+.adjust-block
+	display: inline-block
+	width: 20px
+	height: 20px
+	transition: $transition
+	.adjust-bid
+		width: 18px
+		height: 18px
+		border-radius: 100px
+		background-size: cover
+		background-position: center center
+		&:hover 
+			transform: scale(1.1)
+		&.adjust-bid-minus-gray
+			background-image: url(../img/minus-gray.svg)
+		&.adjust-bid-minus-blue
+			background-image: url(../img/minus-blue.svg)
+		&.adjust-bid-plus-gray
+			background-image: url(../img/plus-gray.svg)
+		&.adjust-bid-plus-blue
+			background-image: url(../img/plus-blue.svg)
+
+.bid-time
+	.bid-clock
+		display: inline-block
+		padding-right: 2px
+		width: 16px
+		height: 16px
+		vertical-align: middle
+		background-size: cover
+		background-position: center center
+		&.bid-clock-blue
+			background-image: url(../img/clock-blue.svg)
+		&.bid-clock-green
+			background-image: url(../img/clock-green.svg)
+		&.bid-check-blue
+			background-image: url(../img/check-blue.svg)
+		&.bid-check-green
+			background-image: url(../img/check-green.svg)
+	.bid-text-blue
+		color: $color-blue
+	.bid-text-green
+		color: $color-green
+
+
+

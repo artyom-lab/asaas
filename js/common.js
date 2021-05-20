@@ -10,8 +10,8 @@ $(function() {
     navText: ["", ""]
   });
 
-  Waves.attach('.btn-sign, .btn-edit, .owl-prev, .owl-next, .watch');
-  Waves.attach('.btn', ['waves-light']);
+  Waves.attach('.btn-sign, .btn-edit, .owl-prev, .owl-next, .watch, .page-link');
+  Waves.attach();
   Waves.init();
 
   AOS.init({
