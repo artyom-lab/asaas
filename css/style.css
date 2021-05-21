@@ -727,11 +727,29 @@ label.checkbox-group {
   font-size: 14px;
   font-weight: bold;
   padding: 2px 10px; }
-  .btn-watch:hover {
+  .btn-watch .img-watch {
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../img/watch.svg); }
+  .btn-watch:hover, .btn-watch:active {
     background: #FFF;
     color: #165366; }
   .btn-watch:focus {
     box-shadow: none; }
+
+.btn-watched {
+  color: #FFF;
+  border-color: #1F687E;
+  background: #1F687E; }
+  .btn-watched .img-watch {
+    background-image: url(../img/watch-white.svg); }
+  .btn-watched:hover, .btn-watched:active {
+    background: #1F687E !important;
+    color: #FFF !important;
+    border-color: #1F687E !important; }
 
 .address {
   padding-top: 8px;
@@ -763,7 +781,7 @@ label.checkbox-group {
   color: #535353; }
   @media (max-width: 575.98px) {
     .bid-block {
-      padding: 15px; } }
+      padding: 25px 15px; } }
 
 .adjust-block {
   display: inline-block;
@@ -807,5 +825,20 @@ label.checkbox-group {
   color: #1F687E; }
 .bid-time .bid-text-green {
   color: #24997D; }
+
+.block-gray {
+  width: 240px;
+  height: 160px;
+  border-radius: 8px;
+  background: #F5F5F7; }
+
+@media (min-width: 1200px) {
+  .modal-deposit.modal-1000 {
+    max-width: 1000px; } }
+.modal-deposit .modal-content {
+  border-radius: 16px; }
+  .modal-deposit .modal-content .card-signup {
+    border: 0;
+    box-shadow: none; }
 
 /*# sourceMappingURL=style.css.map */

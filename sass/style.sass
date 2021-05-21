@@ -787,11 +787,29 @@ label
 	font-size: $fz-14
 	font-weight: bold
 	padding: 2px 10px
-	&:hover 
+	.img-watch
+		display: inline-block
+		width: 16px
+		height: 11px
+		background-size: cover
+		background-position: center center
+		background-image: url(../img/watch.svg)
+	&:hover, &:active
 		background: $color-white
 		color: $color-blue-2
 	&:focus 
 		box-shadow: none
+
+.btn-watched
+	color: $color-white
+	border-color:	$color-blue
+	background: $color-blue
+	.img-watch
+		background-image: url(../img/watch-white.svg)
+	&:hover, &:active 
+		background: $color-blue !important
+		color: $color-white !important
+		border-color:	$color-blue !important
 
 .address
 	padding-top: 8px
@@ -821,7 +839,7 @@ label
 	border: 1px solid $color-card
 	color: $color-gray-3
 	@media (max-width: 575.98px)
-		padding: 15px
+		padding: 25px 15px
 
 .adjust-block
 	display: inline-block
@@ -867,5 +885,18 @@ label
 	.bid-text-green
 		color: $color-green
 
+.block-gray
+	width: 240px
+	height: 160px
+	border-radius: 8px
+	background: $color-gray-pagination
 
-
+.modal-deposit
+	&.modal-1000
+		@media (min-width: 1200px)
+			max-width: 1000px
+	.modal-content 
+		border-radius: 16px
+		.card-signup
+			border: 0
+			box-shadow: none

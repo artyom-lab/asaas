@@ -11,7 +11,7 @@ $(function() {
   });
 
   Waves.attach('.btn-sign, .btn-edit, .owl-prev, .owl-next, .watch, .page-link');
-  Waves.attach();
+  Waves.attach('.btn', ['waves-light']);
   Waves.init();
 
   AOS.init({
@@ -83,6 +83,28 @@ $(function() {
       },
       fileUpload: {
         required: true,
+      },
+      cardnumber: {
+        minlength: 1,
+        required: true,
+      },
+      holdername: {
+        required: true,
+        minlength: 8,
+        maxlength: 8,
+      },
+      date: {
+        required: true,
+        minlength: 5,
+      },
+      cvv: {
+        required: true,
+        minlength: 3,
+        maxlength: 3,
+      },
+      amount: {
+        required: true,
+        minlength: 3,
       },
     },
 

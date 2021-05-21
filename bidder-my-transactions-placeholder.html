@@ -47,13 +47,10 @@
             <a class="nav-link" href="#!">My Bids</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!">Transactions</a>
+            <a class="nav-link active" href="#!">Transactions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#!">Account</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-red" href="#!">Sign out</a>
           </li>
         </ul>
       </div>
@@ -63,121 +60,24 @@
   <section class="section">
     <div class="container">
       <div class="form-row justify-content-center">
-        <div class="col-sm-11 col-md-8 col-xl-10">
-          <div class="card card-signup">
-            <div class="row align-items-center mb-2">
-              <div class="col">
-                <h2 class="h2 lh-1">Last step</h2>
-              </div>
+        <div class="col-sm-11 col-md-8 col-xl-6">
+          <div class="card card-signup text-center">
+            <div class="row justify-content-center align-items-center mb-4">
               <div class="col-auto">
-                <div>
-                  <img src="img/lock.svg" alt="">
+                <div class="block-gray d-flex">
+                  <div class="m-auto">
+                    <img src="img/wallet.svg" alt="">
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-xl-8">
-                <p class="pb-3 text-gray">This information will only be shared with Auctioneers if you win one of their auctions. You can register as a company or a private bidder.</p>
+            <h3>You don’t have any trasnactions yet</h3>
+            <p class="pb-2 text-gray">Select an auction, deposit and start bidding now</p>
+            <div class="row justify-content-center">
+              <div class="col-11 col-sm-9 col-lg-6">
+                <button class="btn btn-success btn-sign ml-0 btn-block py-2">Browse available auctions</button>
               </div>
             </div>
-            <form id="form" novalidate="novalidate">
-              <div class="row">
-                <div class="col-xl-6">
-                  <div class="form-group disabled">
-                    <div class="mb-2">First name</div>
-                    <input type="text" class="form-control" placeholder="Albus" name="firstname" disabled>
-                    <div class="fz-14 mt-2 confirmed">Confirmed through your government ID</div>
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div class="form-group disabled">
-                    <div class="mb-2">Second name</div>
-                    <input type="text" class="form-control" placeholder="Severus" name="secondname" disabled>
-                    <div class="fz-14 mt-2 confirmed">Confirmed through your government ID</div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-6">
-                  <div class="form-group disabled">
-                    <div class="mb-2">Third name</div>
-                    <input type="text" class="form-control" placeholder="Al" name="thirdname" disabled>
-                    <div class="fz-14 mt-2 confirmed">Confirmed through your government ID</div>
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div class="form-group disabled">
-                    <div class="mb-2">Family name</div>
-                    <input type="text" class="form-control" placeholder="Potter" name="familyname" disabled>
-                    <div class="fz-14 mt-2 confirmed">Confirmed through your government ID</div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-6">
-                  <div class="form-group">
-                    <div class="mb-2">Your email<span class="text-red">*</span></div>
-                    <input type="email" class="form-control" placeholder="albus@ministryofmagic.com.sa" name="email" id="email">
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-2 pb-3">
-                <div class="col-auto">
-                  <label class="check-group checkbox-group">
-                    <input type="checkbox" id="switcher">
-                    <div>Sign up as a company</div>
-                  </label>
-                </div>
-              </div>
-
-              <div class="row align-items-center mt-4 block-person">
-                <div class="col-sm-auto">
-                  <button class="btn btn-success btn-sign ml-0 fz-18 py-2 btn-block d-sm-inline-block">Confrim and start bidding</button>
-                </div>
-              </div>
-
-              <div class="mt-2 block-company">
-                <div class="row">
-                  <div class="col-xl-6">
-                    <div class="form-group">
-                      <div class="mb-2">Company name<span class="text-red">*</span></div>
-                      <input type="text" class="form-control" placeholder="Awesome Industries Co." name="compname">
-                    </div>
-                  </div>
-                  <div class="col-xl-6">
-                    <div class="form-group">
-                      <div class="d-flex flex-column-reverse">
-                        <input type="number" class="form-control" placeholder="1010584421" id="count-eight" maxlength="8" name="registrationnumber">
-                        <div class="row row-1 mb-2 align-items-center">
-                          <div class="col">Registration number<span class="text-red">*</span>
-                          </div>
-                          <div class="col-auto fz-14">
-                            <div id="the-count" class="the-count">
-                              <span id="current">0</span>
-                              <span id="maximum">/8</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xl-6">
-                    <div class="form-group">
-                      <div class="mb-2">Company address<span class="text-red">*</span></div>
-                      <input type="text" class="form-control" placeholder="52 King Abdullah Rd, Riyadh" name="compadress">
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center mt-4">
-                  <div class="col-sm-auto">
-                    <button class="btn btn-success btn-sign ml-0 fz-18 py-2 btn-block d-sm-inline-block">Start bidding on Asaas</button>
-                  </div>
-                </div>
-              </div>
-
-            </form>
           </div>
         </div>
       </div>
