@@ -41,46 +41,313 @@
       <div class="collapse navbar-collapse text-center text-xl-left" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto align-items-xl-center my-3 my-xl-0">
           <li class="nav-item">
-            <a class="nav-link" href="#!">Auctions</a>
+            <a class="nav-link" href="#!">All Auctions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#!">My Bids</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Transactions</a>
+            <a class="nav-link active" href="#!">My Auctions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#!">Account</a>
           </li>
         </ul>
+        <a href="#!" class="btn btn-success btn-sign mb-3 mb-xl-0">New Auction</a>
       </div>
     </div>
   </nav>
 
-  <section class="section">
+  <section class="py-5 bg-white">
     <div class="container">
-      <div class="form-row justify-content-center">
-        <div class="col-sm-11 col-md-8 col-xl-6">
-          <div class="card card-signup text-center">
-            <div class="row justify-content-center align-items-center mb-4">
-              <div class="col-auto">
-                <div class="block-gray bg-gray d-flex">
-                  <div class="m-auto">
-                    <img src="img/mountains.svg" alt="">
-                  </div>
+      <div class="row align-items-center mb-3 pb-3">
+        <div class="col-sm">
+          <h2 class="overflow-hidden">
+            <div class="mb-1" data-aos="fade-up">My Auctions</div>
+          </h2>
+        </div>
+      </div>
+      <div class="row mb-4 pb-3">
+        <div class="col-lg-7 mb-3 mb-lg-0">
+          <div class="row row-2">
+            <div class="col-md-auto mb-3 mb-md-0">
+              <div class="block-img bg-gray d-flex embed-responsive embed-responsive-16by9">
+                <div class="m-auto">
+                  <img src="img/mountains.svg" alt="">
                 </div>
               </div>
             </div>
-            <h3>You don’t have any bids yet</h3>
-            <p class="pb-2 text-gray">Select an auction and start bidding now</p>
-            <div class="row justify-content-center">
-              <div class="col-11 col-sm-9 col-lg-6">
-                <button class="btn btn-success btn-sign ml-0 btn-block py-2">Browse available auctions</button>
+            <div class="col-md">
+              <div class="pb-1">
+                <span class="pill pill-closed">Draft auction</span>
+              </div>
+              <a href="#!" class="a-bid">
+                <h3>An example property title for auctioneers listing an auction</h3>
+              </a>
+              <div class="text-gray">Property description if there is a consistent presence of property descriptions</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col">
+              <div class="text-gray pb-2">
+                <span>Start time not yet set</span>
+                <span class="mx-1">&#8226;</span>
+                <span>Starting bid not yet set</span>
+              </div>
+              <div class="text-gray">Property description if there is a consistent presence of property descriptions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4 pb-3">
+        <div class="col-lg-7 mb-3 mb-lg-0">
+          <div class="row row-2">
+            <div class="col-md-auto mb-3 mb-md-0">
+              <div class="bg-img block-img embed-responsive embed-responsive-16by9" style="background-image: url(img/img43.png)">
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="pb-1">
+                <span class="pill pill-red">Rejected</span>
+              </div>
+              <a href="#!" class="a-bid">
+                <h3>An example property title for auctioneers listing an auction</h3>
+              </a>
+              <div class="text-gray">Property description if there is a consistent presence of property descriptions </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col">
+              <div class="text-gray pb-2">
+                <span>Starts <span class="text-blue font-weight-bold">23/03/2021, 12:30</span></span>
+                <span class="mx-1">&#8226;</span>
+                <span>Starting bid: <span class="text-blue font-weight-bold">SR 1 500 000</span></span>
+              </div>
+              <div class="text-gray">Your auction listing has been rejected. Here’s the comment from our team: Please upload images without the watermark.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4 pb-3">
+        <div class="col-lg-7 mb-3 mb-lg-0">
+          <div class="row row-2">
+            <div class="col-md-auto mb-3 mb-md-0">
+              <div class="bg-img block-img embed-responsive embed-responsive-16by9" style="background-image: url(img/img44.png)">
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="pb-1">
+                <span class="pill pill-closed">Pending approval</span>
+              </div>
+              <a href="#!" class="a-bid">
+                <h3>An example property title for auctioneers listing an auction</h3>
+              </a>
+              <div class="text-gray">Property description if there is a consistent presence of property descriptions </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col">
+              <div class="text-gray pb-2">
+                <span>Starts <span class="text-blue font-weight-bold">23/03/2021, 12:30</span></span>
+                <span class="mx-1">&#8226;</span>
+                <span>Starting bid: <span class="text-blue font-weight-bold">SR 1 500 000</span></span>
+              </div>
+              <div class="text-gray">Your auction is pending approval. Once approved it will automatically be listed as upcoming and it will be made live on 23/03/2021 at 12:30. You will be able to see the latest bids here.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4 pb-3">
+        <div class="col-lg-7 mb-3 mb-lg-0">
+          <div class="row row-2">
+            <div class="col-md-auto mb-3 mb-md-0">
+              <div class="bg-img block-img embed-responsive embed-responsive-16by9" style="background-image: url(img/img45.png)">
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="pb-1">
+                <span class="pill pill-green">Upcoming</span>
+              </div>
+              <a href="#!" class="a-bid">
+                <h3>An example property title for auctioneers listing an auction</h3>
+              </a>
+              <div class="text-gray">Property description if there is a consistent presence of property descriptions </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col">
+              <div class="text-gray pb-2">
+                <span>Starts <span class="text-blue font-weight-bold">23/03/2021, 12:30</span></span>
+                <span class="mx-1">&#8226;</span>
+                <span>Starting bid: <span class="text-blue font-weight-bold">SR 1 500 000</span></span>
+              </div>
+              <div class="text-gray">Your auction is pending approval. Once approved it will automatically be listed as upcoming and it will be made live on 23/03/2021 at 12:30. You will be able to see the latest bids here.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4 pb-3">
+        <div class="col-lg-7 mb-3 mb-lg-0">
+          <div class="row row-2">
+            <div class="col-md-auto mb-3 mb-md-0">
+              <div class="bg-img block-img embed-responsive embed-responsive-16by9" style="background-image: url(img/img46.png)">
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="pb-1">
+                <span class="pill pill-green">Live auction</span>
+              </div>
+              <a href="#!" class="a-bid">
+                <h3>An example property title for auctioneers listing an auction</h3>
+              </a>
+              <div class="text-gray">Property description if there is a consistent presence of property descriptions </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col">
+              <div class="text-gray pb-2"><span><span class="text-blue font-weight-bold">2d : 3h : 15m</span> left</span>
+                <span class="mx-1">&#8226;</span>
+                <span>25 Bids</span>
+                <span class="mx-1">&#8226;</span>
+                <span>Current bid: <span class="text-blue font-weight-bold">SR 1 500 000</span></span>
+              </div>
+              <div class="text-gray fz-15">
+                <span class="mr-2">12:05:31 - 21/03/2020</span>
+                <span class="text-black">A user from Riyadh (32.24.20.20) bid <span class="text-blue">SAR 1 400 000</span></span>
+              </div>
+              <div class="text-gray fz-15">
+                <span class="mr-2">12:05:31 - 21/03/2020</span>
+                <span class="text-black">A user from Riyadh (32.24.20.20) bid <span class="text-blue">SAR 1 400 000</span></span>
+              </div>
+              <div class="text-gray fz-15">
+                <span class="mr-2">12:05:31 - 21/03/2020</span>
+                <span class="text-black">A user from Riyadh (32.24.20.20) bid <span class="text-blue">SAR 1 400 000</span></span>
+              </div>
+              <div class="text-gray fz-15">
+                <span class="mr-2">12:05:31 - 21/03/2020</span>
+                <span class="text-black">A user from Riyadh (32.24.20.20) bid <span class="text-blue">SAR 1 400 000</span></span>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="row mb-4 pb-3">
+        <div class="col-lg-7 mb-3 mb-lg-0">
+          <div class="row row-2">
+            <div class="col-md-auto mb-3 mb-md-0">
+              <div class="bg-img block-img embed-responsive embed-responsive-16by9" style="background-image: url(img/img47.png)">
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="pb-1">
+                <span class="pill pill-green">Live auction</span>
+              </div>
+              <a href="#!" class="a-bid">
+                <h3>An example property title for auctioneers listing an auction</h3>
+              </a>
+              <div class="text-gray">Property description if there is a consistent presence of property descriptions</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col">
+              <div class="text-gray pb-2">
+                <span><span class="text-blue font-weight-bold">2d : 3h : 15m</span> left</span>
+                <span class="mx-1">&#8226;</span>
+                <span>25 Bids</span>
+                <span class="mx-1">&#8226;</span>
+                <span>Current bid: <span class="text-blue font-weight-bold">SR 1 500 000</span></span>
+              </div>
+              <div class="text-gray">Property description if there is a consistent presence of property descriptions </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4 pb-3">
+        <div class="col-lg-7 mb-3 mb-lg-0">
+          <div class="row row-2">
+            <div class="col-md-auto mb-3 mb-md-0">
+              <div class="bg-img block-img embed-responsive embed-responsive-16by9" style="background-image: url(img/img48.png)">
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="pb-1">
+                <span class="pill pill-green">Completed</span>
+              </div>
+              <a href="#!" class="a-bid">
+                <h3>An example property title for auctioneers listing an auction</h3>
+              </a>
+              <div class="text-gray">Property description if there is a consistent presence of property descriptions</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col">
+              <div class="text-gray pb-2">
+                <span>Ended <span class="text-blue font-weight-bold">23/03/2021, 12:30</span></span>
+                <span class="mx-1">&#8226;</span>
+                <span>25 Bids</span>
+                <span class="mx-1">&#8226;</span>
+                <span>Winning bid: <span class="text-blue font-weight-bold">SR 1 500 000</span></span>
+              </div>
+              <div class="text-gray">This auction has ended and you have a winning bid! Click on the details to get the bidder’s information.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4 pb-3">
+        <div class="col-lg-7 mb-3 mb-lg-0">
+          <div class="row row-2">
+            <div class="col-md-auto mb-3 mb-md-0">
+              <div class="bg-img block-img embed-responsive embed-responsive-16by9" style="background-image: url(img/img49.png)">
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="pb-1">
+                <span class="pill pill-green">Completed</span>
+              </div>
+              <a href="#!" class="a-bid">
+                <h3>An example property title for auctioneers listing an auction</h3>
+              </a>
+              <div class="text-gray">An example property title for auctioneers listing an auction</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row">
+            <div class="col">
+              <div class="text-gray pb-2">
+                <span>Ended <span class="text-blue font-weight-bold">23/03/2021, 12:30</span></span>
+                <span class="mx-1">&#8226;</span>
+                <span>No bids</span>
+              </div>
+              <div class="text-gray">This auction has ended without any bids. Try re-posting this property again with adjusted start price and duration.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0 bg-white">
+    <div class="container">
+      <ul class="pagination justify-content-center justify-content-lg-start m-0">
+          <li class="page-item"><a class="page-link active" href="#!">1</a></li>
+          <li class="page-item"><a class="page-link" href="#!">2</a></li>
+          <li class="page-item"><a class="page-link" href="#!">3</a></li>
+          <li class="page-item"><a class="page-link" href="#!">4</a></li>
+          <li class="page-item"><a class="page-link" href="#!">5</a></li>
+          <li class="page-item"><a class="page-link" href="#!">6</a></li>
+        </ul>
     </div>
   </section>
 

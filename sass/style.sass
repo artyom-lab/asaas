@@ -55,6 +55,7 @@ $font-weight-700: 700
 $fz-0: 0px
 $fz-9: 9px
 $fz-14: 14px
+$fz-15: 15px
 $fz-16: 16px
 $fz-18: 18px
 
@@ -211,6 +212,8 @@ input
 	font-size: $fz-9
 .fz-14
 	font-size: $fz-14 !important
+.fz-15
+	font-size: $fz-15 !important
 .fz-16
 	font-size: $fz-16 !important
 .fz-18
@@ -923,10 +926,18 @@ label
 	.bid-text-green
 		color: $color-green
 
-.block-gray-img
+.block-img
+	border-radius: 8px
+	@media (min-width: 768px)
+		width: 240px
+		height: 160px
+
+.block-gray
+	border-radius: 8px
 	width: 240px
 	height: 160px
-	border-radius: 8px
+
+.bg-gray
 	background: $color-gray-pagination
 
 .modal-deposit
