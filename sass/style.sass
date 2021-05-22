@@ -456,6 +456,12 @@ hr
 	transition: $transition
 	color: $color-gray-2
 	border: 1px solid $color-hr
+	&::-webkit-input-placeholder
+		color: $color-gray-2
+	&::-moz-placeholder
+		color: $color-gray-2
+	&:-ms-input-placeholder
+		color: $color-gray-2
 	&:hover 
 		background: $color-white-2
 	&:focus
@@ -471,6 +477,31 @@ hr
 		~ .row
 			.the-count
 				color: $color-red
+	&.form-control-blue
+		color: $color-blue
+		background: $color-white-2
+		padding-right: 30px
+		&::-webkit-input-placeholder
+			color: $color-blue
+		&::-moz-placeholder
+			color: $color-blue
+		&:-ms-input-placeholder
+			color: $color-blue
+		&:focus
+			color: $color-blue
+
+.copy 
+	position: absolute 
+	transition: $transition
+	background: none
+	top: 50%
+	transform: translateY(-50%)
+	right: 13px
+	width: 18px
+	height: 20px
+	background-size: cover
+	background-position: center center
+	background-image: url(../img/copy.svg)
 
 .form-group
 	color: $color-gray-3
@@ -914,3 +945,33 @@ label
 				padding: 60px
 				@media (max-width: 575.98px)
 					padding: 40px 15px
+
+.table-main
+	border: 0.5px solid $color-disabled
+	border-radius: 4px
+	.table-2
+		min-width: 1108px
+		margin-bottom: 0 !important
+		width: 100%
+		.d-table-row
+			vertical-align: middle
+			color: $color-black
+			.d-table-cell
+				padding: 10px 16px
+				vertical-align: middle
+				border: 0
+				&:last-child
+					text-align: right
+			&:first-child
+				background: $color-blue !important
+				.d-table-cell 
+					color: $color-white
+					font-weight: $font-weight-500
+		.d-table-row:nth-of-type(odd)
+			background: $color-white-2
+		.d-table-row:nth-of-type(even)
+			background: $color-white
+		a 
+			&.d-table-row 
+				&:hover 
+					background: $color-hr

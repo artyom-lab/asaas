@@ -409,6 +409,12 @@ hr {
   transition: 0.3s;
   color: #888893;
   border: 1px solid #EEEEF0; }
+  .form-control::-webkit-input-placeholder {
+    color: #888893; }
+  .form-control::-moz-placeholder {
+    color: #888893; }
+  .form-control:-ms-input-placeholder {
+    color: #888893; }
   .form-control:hover {
     background: #FCFCFC; }
   .form-control:focus {
@@ -423,6 +429,31 @@ hr {
     border-color: #EF6A82; }
     .form-control.error ~ .row .the-count {
       color: #EF6A82; }
+  .form-control.form-control-blue {
+    color: #1F687E;
+    background: #FCFCFC;
+    padding-right: 30px; }
+    .form-control.form-control-blue::-webkit-input-placeholder {
+      color: #1F687E; }
+    .form-control.form-control-blue::-moz-placeholder {
+      color: #1F687E; }
+    .form-control.form-control-blue:-ms-input-placeholder {
+      color: #1F687E; }
+    .form-control.form-control-blue:focus {
+      color: #1F687E; }
+
+.copy {
+  position: absolute;
+  transition: 0.3s;
+  background: none;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 13px;
+  width: 18px;
+  height: 20px;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../img/copy.svg); }
 
 .form-group {
   color: #535353; }
@@ -856,5 +887,33 @@ label.checkbox-group {
       @media (max-width: 575.98px) {
         .modal-deposit .modal-content .card-signup.card-signup-60 {
           padding: 40px 15px; } }
+
+.table-main {
+  border: 0.5px solid #B7B7BD;
+  border-radius: 4px; }
+  .table-main .table-2 {
+    min-width: 1108px;
+    margin-bottom: 0 !important;
+    width: 100%; }
+    .table-main .table-2 .d-table-row {
+      vertical-align: middle;
+      color: #2A2A2A; }
+      .table-main .table-2 .d-table-row .d-table-cell {
+        padding: 10px 16px;
+        vertical-align: middle;
+        border: 0; }
+        .table-main .table-2 .d-table-row .d-table-cell:last-child {
+          text-align: right; }
+      .table-main .table-2 .d-table-row:first-child {
+        background: #1F687E !important; }
+        .table-main .table-2 .d-table-row:first-child .d-table-cell {
+          color: #FFF;
+          font-weight: 500; }
+    .table-main .table-2 .d-table-row:nth-of-type(odd) {
+      background: #FCFCFC; }
+    .table-main .table-2 .d-table-row:nth-of-type(even) {
+      background: #FFF; }
+    .table-main .table-2 a.d-table-row:hover {
+      background: #EEEEF0; }
 
 /*# sourceMappingURL=style.css.map */
