@@ -133,13 +133,13 @@
           <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
           <div class="row row-1 align-items-center py-2 mb-4">
             <div class="col-auto">
-              <a href="#!" class="a-property"><img src="img/property1.svg" alt="" class="align-middle"><span class="d-inline-block pl-1 align-middle">House</span></a>
+              <a href="#!" class="a-property"><img src="img/property1.svg" alt="" class="align-middle"><span class="pl-1 align-middle">House</span></a>
             </div>
             <div class="col-auto">
-              <a href="#!" class="a-property"><img src="img/property2.svg" alt="" class="align-middle"><span class="d-inline-block pl-1 align-middle">350 sqm</span></a>
+              <a href="#!" class="a-property"><img src="img/property2.svg" alt="" class="align-middle"><span class="pl-1 align-middle">350 sqm</span></a>
             </div>
             <div class="col-auto">
-              <a href="#!" class="a-property"><img src="img/property5.svg" alt="" class="align-middle"><span class="d-inline-block pl-1 align-middle">SAR 2500 per sqm</span></a>
+              <a href="#!" class="a-property"><img src="img/property5.svg" alt="" class="align-middle"><span class="pl-1 align-middle">SAR 2500 per sqm</span></a>
             </div>
           </div> 
           <div class="fz-32 font-weight-bold lh-12 mb-3">Location</div>
@@ -428,16 +428,92 @@
                 </div>
               </div>
             </div>
-
             <div class="row align-items-center mt-4">
               <div class="col-lg-auto">
-                <button class="btn btn-success btn-sign ml-0 fz-18 py-2 btn-block d-lg-inline-block">Confirm depositing SAR 13 000</button>
+                <button class="btn btn-success btn-sign ml-0 fz-18 py-2 btn-block d-lg-inline-block" data-toggle="modal" data-target="#modal2">Confirm depositing SAR 13 000</button>
               </div>
               <div class="col-lg text-center text-lg-right mt-2 mt-lg-0">
-                <a href="#!" class="see-all see-all-2">Cancel and close</a>
+                <a href="#!" class="see-all see-all-2" data-dismiss="modal">Cancel and close</a>
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-deposit modal-1000">
+      <div class="modal-content">
+        <div class="card card-signup card-signup-60">
+          <div class="row row-3 justify-content-center">
+            <div class="col-lg-9 col-xl-5">
+              <div class="card card-2 h-auto">
+                <div class="watch-container embed-responsive embed-responsive-4by3" style="background-image: url(img/img1.png)">
+                </div>
+                <div class="card-block">
+                  <div class="row row-1 mb-1">
+                    <div class="col-sm">2d : 3h : 15m left</div>
+                    <div class="col-sm-auto">
+                      <div>Current bid: <span class="text-blue font-weight-bold">SR 1 500 000</span></div>
+                    </div>
+                  </div>
+                  <h3>Property title</h3>
+                  <p>The property description will include a seo-optimized sales copy for positioning the auction to users</p>
+                  <div class="mt-auto">
+                    <div class="row row-1 align-items-center">
+                      <div class="col-auto">
+                        <a href="#!" class="a-property"><img src="img/property1.svg" alt="" class="align-middle"><span class="pl-1 align-middle">Property type</span></a>
+                      </div>
+                      <div class="col-auto">
+                        <a href="#!" class="a-property"><img src="img/property2.svg" alt="" class="align-middle"><span class="pl-1 align-middle">Property size</span></a>
+                      </div>
+                      <div class="col-auto">
+                        <a href="#!" class="a-property"><img src="img/property3.svg" alt="" class="align-middle"><span class="pl-1 align-middle">Property address - neighbourhood, city</span></a>
+                      </div>
+                      <div class="col-auto">
+                        <a href="#!" class="a-property"><img src="img/property4.svg" alt="" class="align-middle"><span class="pl-1 align-middle">Auctioneer company name and logo</span></a>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 col-xl-7">
+              <h2 class="mt-3">Please confirm bidding</h2>
+              <div class="h2 text-blue mb-4">SAR 1 300 000</div>
+              <p>Once the auction is closed, if you hold the winning bid, your information will be shared with the Auctioneer and they will contact you to collect the remaining part of the winning bid price</p>
+              <p class="pt-2 pb-4">Your bid will be processed instantly after confirming. If a another bidder bids while you are on this screen the bid button will become gray for 1 second, and reactivate with the updated price.</p>
+              <label class="check-group checkbox-group">
+                <input type="checkbox">
+                <div>Enable instant bidding on this auction</div>
+              </label>
+              <div class="row align-items-center mt-4 pt-2">
+                <div class="col-lg-auto">
+                  <button class="btn btn-success btn-sign ml-0 fz-18 py-2 btn-block d-lg-inline-block" data-toggle="modal" data-target="#modal3">Confrim SAR 1 300 000 bid</button>
+                </div>
+                <div class="col-lg-auto text-center text-lg-right mt-2 mt-lg-0">
+                  <a href="#!" class="see-all see-all-2" data-dismiss="modal">Cancel and close</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3" tabindex="-1">
+    <div class="modal-dialog modal modal-dialog-centered modal-deposit modal-565">
+      <div class="modal-content">
+        <div class="card card-signup">
+          <h2 class="mb-4">Deposited successfully</h2>
+          <p>Your deposit was successful. You can now bid on the auction. You will be redirected to the bidding screen in 3 seconds.</p>
+          <div class="row align-items-center mt-4">
+            <div class="col-lg-auto">
+              <button class="btn btn-success btn-sign ml-0 fz-18 py-2 btn-block d-lg-inline-block">Complete my bid</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

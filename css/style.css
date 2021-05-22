@@ -48,7 +48,7 @@ input[type=number] {
   input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .container {
     max-width: 1200px; } }
 .text-blue {
@@ -266,6 +266,8 @@ hr {
 
 .a-property {
   color: #000; }
+  .a-property span {
+    display: inline !important; }
   .a-property:hover {
     color: #000; }
 
@@ -280,6 +282,9 @@ hr {
     height: 100%;
     display: flex;
     flex-direction: column; }
+    @media (max-width: 330.98px) {
+      .card-2 .card-block {
+        padding: 10px 8px 32px; } }
   .card-2.past {
     opacity: 0.5; }
 
@@ -439,6 +444,9 @@ label.check-group {
   line-height: 1.4;
   transition: 0.3s;
   color: #888893; }
+  @media (max-width: 575.98px) {
+    label.check-group {
+      font-size: 16px; } }
   label.check-group div:before {
     content: "";
     position: absolute;
@@ -826,7 +834,7 @@ label.checkbox-group {
 .bid-time .bid-text-green {
   color: #24997D; }
 
-.block-gray {
+.block-gray-img {
   width: 240px;
   height: 160px;
   border-radius: 8px;
@@ -835,10 +843,18 @@ label.checkbox-group {
 @media (min-width: 1200px) {
   .modal-deposit.modal-1000 {
     max-width: 1000px; } }
+@media (min-width: 1200px) {
+  .modal-deposit.modal-565 {
+    max-width: 565px; } }
 .modal-deposit .modal-content {
-  border-radius: 16px; }
+  border-radius: 16px;
+  border: 0; }
   .modal-deposit .modal-content .card-signup {
-    border: 0;
     box-shadow: none; }
+    .modal-deposit .modal-content .card-signup.card-signup-60 {
+      padding: 60px; }
+      @media (max-width: 575.98px) {
+        .modal-deposit .modal-content .card-signup.card-signup-60 {
+          padding: 40px 15px; } }
 
 /*# sourceMappingURL=style.css.map */
