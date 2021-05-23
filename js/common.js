@@ -78,6 +78,16 @@ $(function() {
         minlength: 1,
         maxlength: 200,
       },
+      description2: {
+        required: true,
+        minlength: 1,
+        maxlength: 50,
+      },
+      description3: {
+        required: true,
+        minlength: 1,
+        maxlength: 100,
+      },
       upload: {
         required: true,
       },
@@ -129,6 +139,22 @@ $(function() {
         current = $('#current-10'),
         maximum = $('#maximum-10'),
         theCount = $('#the-count-10'); 
+    current.text(characterCount);
+  });
+
+  $('#count-50').keyup(function() {  
+    var characterCount = $(this).val().length,
+        current = $('#current-50'),
+        maximum = $('#maximum-50'),
+        theCount = $('#the-count-50'); 
+    current.text(characterCount);
+  });
+
+  $('#count-100').keyup(function() {  
+    var characterCount = $(this).val().length,
+        current = $('#current-100'),
+        maximum = $('#maximum-100'),
+        theCount = $('#the-count-100'); 
     current.text(characterCount);
   });
 
