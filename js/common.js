@@ -88,6 +88,16 @@ $(function() {
         minlength: 1,
         maxlength: 100,
       },
+      description250a: {
+        required: true,
+        minlength: 1,
+        maxlength: 250,
+      },
+      description250b: {
+        required: true,
+        minlength: 1,
+        maxlength: 250,
+      },
       upload: {
         required: true,
       },
@@ -115,6 +125,29 @@ $(function() {
       amount: {
         required: true,
         minlength: 3,
+      },
+      propertyarea: {
+        required: true,
+        minlength: 1,
+      },
+      city: {
+        required: true,
+        minlength: 2,
+      },
+      neighbourhood: {
+        required: true,
+        minlength: 2,
+      },
+      buildingnumber: {
+        required: true,
+        minlength: 1,
+      },
+      zip: {
+        required: true,
+        minlength: 1,
+      },
+      select: {
+        required: true,
       },
     },
 
@@ -163,6 +196,22 @@ $(function() {
         current = $('#current-200'),
         maximum = $('#maximum-200'),
         theCount = $('#the-count-200'); 
+    current.text(characterCount);
+  });
+
+  $('#count-250a').keyup(function() {  
+    var characterCount = $(this).val().length,
+        current = $('#current-250a'),
+        maximum = $('#maximum-250a'),
+        theCount = $('#the-count-250a'); 
+    current.text(characterCount);
+  });
+
+  $('#count-250b').keyup(function() {  
+    var characterCount = $(this).val().length,
+        current = $('#current-250b'),
+        maximum = $('#maximum-250b'),
+        theCount = $('#the-count-250b'); 
     current.text(characterCount);
   });
 

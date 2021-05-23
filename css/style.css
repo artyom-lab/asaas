@@ -418,45 +418,51 @@ hr {
     .card-signup {
       padding: 40px 20px; } }
 
-.form-control {
+.form-control, .custom-select {
   padding: 10px 13px;
   height: 44px;
   font-size: 18px;
   transition: 0.3s;
   color: #888893;
   border: 1px solid #EEEEF0; }
-  .form-control::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder, .custom-select::-webkit-input-placeholder {
     color: #888893; }
-  .form-control::-moz-placeholder {
+  .form-control::-moz-placeholder, .custom-select::-moz-placeholder {
     color: #888893; }
-  .form-control:-ms-input-placeholder {
+  .form-control:-ms-input-placeholder, .custom-select:-ms-input-placeholder {
     color: #888893; }
-  .form-control:hover {
+  .form-control:hover, .custom-select:hover {
     background: #FCFCFC; }
-  .form-control:focus {
+  .form-control:focus, .custom-select:focus {
     border-color: #B7B7BD;
     color: #2A2A2A;
     box-shadow: none; }
-  .form-control:disabled {
+  .form-control:disabled, .custom-select:disabled {
     border-color: #EEEEF0;
     color: #B7B7BD;
     background-color: #FCFCFC; }
-  .form-control.error {
+  .form-control.error, .custom-select.error {
     border-color: #EF6A82; }
-    .form-control.error ~ .row .the-count {
+    .form-control.error ~ .row .the-count, .custom-select.error ~ .row .the-count {
       color: #EF6A82; }
-  .form-control.form-control-blue {
+  .form-control.form-control-blue, .custom-select.form-control-blue {
     color: #1F687E;
     background: #FCFCFC;
     padding-right: 30px; }
-    .form-control.form-control-blue::-webkit-input-placeholder {
+    .form-control.form-control-blue::-webkit-input-placeholder, .custom-select.form-control-blue::-webkit-input-placeholder {
       color: #1F687E; }
-    .form-control.form-control-blue::-moz-placeholder {
+    .form-control.form-control-blue::-moz-placeholder, .custom-select.form-control-blue::-moz-placeholder {
       color: #1F687E; }
-    .form-control.form-control-blue:-ms-input-placeholder {
+    .form-control.form-control-blue:-ms-input-placeholder, .custom-select.form-control-blue:-ms-input-placeholder {
       color: #1F687E; }
-    .form-control.form-control-blue:focus {
+    .form-control.form-control-blue:focus, .custom-select.form-control-blue:focus {
       color: #1F687E; }
+
+.custom-select {
+  padding: 6px 30px 6px 13px;
+  background: #FFF url(../img/arrow.svg) no-repeat right 0.75rem center/20px 11px; }
+  .custom-select:hover {
+    background: #FCFCFC url(../img/arrow.svg) no-repeat right 0.75rem center/20px 11px; }
 
 .copy {
   position: absolute;
@@ -557,8 +563,10 @@ label.checkbox-group {
   height: 100px !important; }
 
 .form-textarea-125 {
-  height: 125px !important;
-  padding-bottom: 40px; }
+  height: 125px !important; }
+
+.form-textarea-72 {
+  height: 72px !important; }
 
 .uploader-plugin {
   position: relative;
@@ -843,6 +851,20 @@ label.checkbox-group {
   color: #535353; }
   @media (max-width: 575.98px) {
     .bid-block {
+      padding: 25px 15px; } }
+
+.draft-block {
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px dashed #B7B7BD; }
+  @media (max-width: 1259.98px) {
+    .draft-block {
+      padding: 24px; } }
+  @media (max-width: 1199.98px) {
+    .draft-block {
+      padding: 32px; } }
+  @media (max-width: 575.98px) {
+    .draft-block {
       padding: 25px 15px; } }
 
 .adjust-block {
