@@ -948,4 +948,21 @@ label.checkbox-group {
     .table-main .table-2 a.d-table-row:hover {
       background: #EEEEF0; }
 
+.draft .text-draft {
+  color: #888893; }
+.draft .circle {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background: #FFF;
+  border: 2px solid #B7B7BD; }
+.draft.success .text-draft {
+  color: #2A2A2A; }
+.draft.success .circle {
+  border: none;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../img/checked.svg); }
+
 /*# sourceMappingURL=style.css.map */

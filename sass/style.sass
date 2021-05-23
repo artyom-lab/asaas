@@ -1007,3 +1007,22 @@ label
 			&.d-table-row 
 				&:hover 
 					background: $color-hr
+
+.draft
+	.text-draft
+		color: $color-gray-2
+	.circle 
+		display: inline-block
+		width: 16px
+		height: 16px
+		border-radius: 100px
+		background: $color-white
+		border: 2px solid $color-disabled
+	&.success
+		.text-draft
+			color: $color-black
+		.circle 
+			border: none
+			background-size: cover
+			background-position: center center
+			background-image: url(../img/checked.svg)
