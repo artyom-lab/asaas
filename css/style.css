@@ -40,6 +40,8 @@ body {
 a {
   text-decoration: none !important;
   transition: 0.3s; }
+  a.text-blue:hover {
+    color: #165366; }
 
 input[type=radio], input[type=checkbox] {
   display: none; }
