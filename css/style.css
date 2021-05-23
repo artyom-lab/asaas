@@ -209,7 +209,18 @@ hr {
   background: #1F687E;
   font-weight: 500; }
   .btn-edit:hover {
-    background: #1F687E; }
+    background: #165366; }
+
+.btn-edit-outline {
+  background: transparent;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #165366;
+  border: 1px solid #165366;
+  font-weight: 500; }
+  .btn-edit-outline:hover {
+    background: #1F687E;
+    border: 1px solid #1F687E; }
 
 .sandwich {
   display: inline-block;
