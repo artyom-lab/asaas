@@ -65,11 +65,48 @@
           </a>
           <div class="fz-32 font-weight-bold lh-12 mt-1 pb-4">General information</div>
 
-          <div class="bg-img bg-img-460 bg-img-radius mt-2" style="background-image: url(../img/img56.png)">
-          </div>
+          <!-- <div id="file-upload-form" class="uploader">
+            <input id="file-upload-1" type="file" name="fileUpload" accept="image/*"/>
+            <label for="file-upload-1" id="file-drag" class="position-relative">
+              <img id="file-image-1" src="#!" alt="Preview" class="hidden">
+              <div id="start">
+                <i class="bg-upload" aria-hidden="true"></i>
+                <div>Upload</div>
+                <div id="notimage" class="hidden">Please select an image</div>
+              </div>
+              <div id="response" class="hidden">
+                <div id="messages"></div>
+              </div>
+              <a href="#!" class="delete-img">
+                <img src="../img/delete.svg" alt="">
+              </a>
+            </label>
+          </div>  -->
+
+          <div class="bg-img bg-img-460 bg-img-radius mt-2" style="background-image: url(../img/img56.png)"></div>
+
           <div class="radius-bottom-8 mb-4">
             <div class="row row-4 pt-1">
               <div class="col-6 col-sm-3 mb-1 mb-sm-0">
+
+                <!-- <div id="file-upload-form" class="uploader">
+                  <input id="file-upload-2" type="file" name="fileUpload" accept="image/*"/>
+                  <label for="file-upload-2" id="file-drag" class="position-relative">
+                    <img id="file-image-2" src="#!" alt="Preview" class="hidden">
+                    <div id="start">
+                      <i class="bg-upload" aria-hidden="true"></i>
+                      <div>Upload</div>
+                      <div id="notimage" class="hidden">Please select an image</div>
+                    </div>
+                    <div id="response" class="hidden">
+                      <div id="messages"></div>
+                    </div>
+                    <a href="#!" class="delete-img">
+                      <img src="../img/delete.svg" alt="">
+                    </a>
+                  </label>
+                </div>  -->
+
                 <div class="bg-img bg-img-112" style="background-image: url(../img/img19.png)">
                 </div>
               </div>
@@ -125,7 +162,7 @@
                 <div class="form-group">
                   <div class="mb-2">Property type<span class="text-red">*</span></div>
                   <select class="custom-select" name="select">
-                    <option selected="">Select</option>
+                    <option disabled selected>Select</option>
                     <option value="1">Select-1</option>
                     <option value="2">Select-2</option>
                     <option value="3">Select-3</option>
@@ -208,8 +245,109 @@
               <div class="fz-14 confirmed">Defining the address above will update the map. Drag the pin to fine-tune the exact location of the property.</div>
             </div>
             <div class="fz-32 font-weight-bold lh-12 pt-2 pb-4">Price, terms, and availability</div>
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="form-group">
+                  <div class="mb-2">Auction start date<span class="text-red">*</span></div>
+                  <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="23 / 05 / 1990" name="startdate">
+                    <a href="#!" class="date"></a>
+                  </div>
+                  <div class="fz-14 mt-2 confirmed">Auctions can start a minimum 24 hours from being listed, and a maximim of 30 days in advance.</div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="form-group">
+                  <div class="mb-2">Auction start time<span class="text-red">*</span></div>
+                  <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="12:30 PM" name="starttime">
+                    <a href="#!" class="date time"></a>
+                  </div>
+                  <div class="fz-14 mt-2 confirmed">Usually a mid-day time slot is best for launching an auction on Asaas.</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="form-group">
+                  <div class="mb-2">Auction end date<span class="text-red">*</span></div>
+                  <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="23 / 05 / 1990" name="enddate">
+                    <a href="#!" class="date"></a>
+                  </div>
+                  <div class="fz-14 mt-2 confirmed">Auctions can be live for a duration of 2 days to 21 days. The average recommended duration is 5 days.</div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="form-group">
+                  <div class="mb-2">Auction end time<span class="text-red">*</span></div>
+                  <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="12:30 PM" name="endtime">
+                    <a href="#!" class="date time"></a>
+                  </div>
+                  <div class="fz-14 mt-2 confirmed">By default, auctions start and end within the same hour diapason.</div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-xl-6">
+                <div class="form-group">
+                  <div class="row row-1 mb-2 align-items-center">
+                    <div class="col">Starting bid<span class="text-red">*</span>
+                    </div>
+                    <div class="col-auto fz-14 text-gray-2">SAR</div>
+                  </div>
+                  <input type="number" class="form-control" placeholder="1 000 000" name="startingbid">
+                  <div class="fz-14 mt-2 confirmed">Please enter a starting bid in SAR that satisfies your requirements for a sell price.</div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="form-group">
+                  <div class="row row-1 mb-2 align-items-center">
+                    <div class="col">Minimum bid increase<span class="text-red">*</span>
+                    </div>
+                    <div class="col-auto fz-14 text-gray-2">SAR</div>
+                  </div>
+                  <input type="number" class="form-control" placeholder="10 000" name="minimumbid">
+                  <div class="fz-14 mt-2 confirmed">Minimum bid increase</div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row py-3">
+              <div class="col-auto">
+                <label class="check-group checkbox-group">
+                  <input type="checkbox" id="switcher">
+                  <div>This auction has special terms</div>
+                </label>
+              </div>
+            </div>
 
-
+            <div class="block-company">
+              <div class="form-group pb-3">
+                <div class="d-flex flex-column-reverse">
+                  <textarea type="text" class="form-control form-textarea form-textarea-155" placeholder="This section is optional. Any special terms will be appended to the platform’s terms and conditions." name="description250c" id="count-250c" maxlength="250"></textarea>
+                  <div class="row row-1 mb-2 align-items-center">
+                    <div class="col">Special auction terms</div>
+                    <div class="col-auto fz-14">
+                      <div id="the-count-250c" class="the-count">
+                        <span id="current-250c">0</span>
+                        <span id="maximum-250c">/250</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fz-14 mt-2 confirmed">This section is optional. Please enter any special terms that come within the auction process here. This is a field just for the process of accepting the bidder. Example: The bidder information will be made public as per Directive x930.</div>
+              </div>
+              <div class="row align-items-center mt-4">
+                <div class="col-sm-auto">
+                  <button class="btn btn-primary btn-sign btn-edit ml-0 fz-18 btn-block d-sm-inline-block py-2">Drafts are automatically saved</button>
+                </div>
+                <div class="col-sm text-center text-sm-right mt-3 mt-sm-0">
+                  <a href="#!" class="see-all see-all-2 fz-18">Preview auction as a bidder</a>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
         <div class="col-lg-6 col-xl-5">
