@@ -448,7 +448,7 @@ hr {
   .form-control.form-control-blue, .custom-select.form-control-blue {
     color: #1F687E;
     background: #FCFCFC;
-    padding-right: 30px; }
+    padding-right: 40px; }
     .form-control.form-control-blue::-webkit-input-placeholder, .custom-select.form-control-blue::-webkit-input-placeholder {
       color: #1F687E; }
     .form-control.form-control-blue::-moz-placeholder, .custom-select.form-control-blue::-moz-placeholder {
@@ -459,7 +459,7 @@ hr {
       color: #1F687E; }
 
 .custom-select {
-  padding: 6px 30px 6px 13px;
+  padding: 6px 40px 6px 13px;
   background: #FFF url(../img/arrow.svg) no-repeat right 0.75rem center/20px 11px; }
   .custom-select:hover {
     background: #FCFCFC url(../img/arrow.svg) no-repeat right 0.75rem center/20px 11px; }
