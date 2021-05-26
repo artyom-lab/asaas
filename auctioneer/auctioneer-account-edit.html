@@ -85,26 +85,27 @@
                       <div class="col">Company icon<span class="text-red">*</span></div>
                     </div>
                     <div class="row row-1">
-                      <div class="col-sm-6 col-lg-4">
-                        <div id="file-upload-form" class="uploader">
-                          <input id="file-upload" type="file" name="fileUpload" accept="image/*"/>
-                          <label for="file-upload" id="file-drag" class="position-relative">
-                            <img id="file-image" src="#!" alt="Preview" class="hidden">
-                            <div id="start">
-                              <i class="bg-upload" aria-hidden="true"></i>
-                              <div>Upload</div>
-                              <div id="notimage" class="hidden">Please select an image</div>
-                            </div>
-                            <div id="response" class="hidden">
-                              <div id="messages"></div>
-                            </div>
-                            <a href="#!" class="delete-img">
+                      <div class="col-sm-auto">
+
+                        <label class="uploader uploader-box">
+                          <input type="file" class="uploader-input" name="fileUpload"/>
+                          <span class="form-control">
+                            <span class="uploader-text-wrap">
+                              <img src="../img/upload.svg">
+                              <span class="uploader-text">Upload</span>
+                            </span>
+                            <img src="../img/placeholder.svg" alt="" class="image">
+                          </span>
+                          <span class="delete-wrap">
+                            <a href="#!" class="delete">
                               <img src="../img/delete.svg" alt="">
+                              <img src="../img/delete-2.svg" alt="">
                             </a>
-                          </label>
-                        </div>            
+                          </span>
+                        </label>
+                                   
                       </div>
-                      <div class="col-sm-6 col-lg-8 mt-3 mt-sm-0">
+                      <div class="col-sm mt-3 mt-sm-0">
                         <div class="fz-14 confirmed">
                           <p>Please upload your comapny’s icon or emblem. This image will be displayed on your auctions.</p>
                           <p>For ideal results upload a 400x400 square jpeg file.</p>
