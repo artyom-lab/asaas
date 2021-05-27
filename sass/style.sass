@@ -513,6 +513,8 @@ hr
 	&:hover 
 		background: $color-white-2 url(../img/arrow.svg) no-repeat right .75rem center/20px 11px
 
+.datepicker, .timepicker
+	padding-right: 44px
 
 .copy 
 	position: absolute 
@@ -539,6 +541,7 @@ hr
 	background-size: cover
 	background-position: center center
 	background-image: url(../img/date.svg)
+	pointer-events: none
 .time
 	background-image: url(../img/time.svg)
 
@@ -645,6 +648,9 @@ label
 	overflow: hidden
 	margin: 0
 	cursor: pointer
+	&.uploaded
+		input
+			pointer-events: none
 	&.uploader-control
 		.form-control
 			padding-right: 45px
@@ -697,6 +703,10 @@ label
 					opacity: 1
 				.image
 					opacity: 0
+		.image
+			background-image: url(../img/placeholder-2.svg)
+			background-position: center center
+			background-size: cover
 	&.uploader-box-3
 		.form-control	
 			width: 100%

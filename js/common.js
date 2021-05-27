@@ -283,6 +283,13 @@ $(function() {
     delayPopup(this);
   });
 
+  $(".datepicker").datetimepicker({
+    format: 'DD / MM / YYYY'
+  });
+  $('.timepicker').datetimepicker({
+    format: 'LT'
+  });
+
   var placeholder;
   $(document).on('change', '.uploader-input', function() {
     var input = $(this),
