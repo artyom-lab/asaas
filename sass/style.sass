@@ -1098,3 +1098,24 @@ label
 			background-size: cover
 			background-position: center center
 			background-image: url(../img/checked.svg)
+
+.bootstrap-datetimepicker-widget 
+	&.dropdown-menu
+		min-width: 290px
+		width: 290px
+		@media (min-width: 1260px)
+			min-width: 313.75px
+		&:after, &:before 
+			display: none
+	.timepicker, .datepicker 
+		padding-right: 0
+	.btn-primary
+		background-color: $color-blue
+		border-color: $color-blue
+		&:active
+			background-color: $color-blue !important
+			border-color: $color-blue !important
+			box-shadow: none
+	.day 
+		&.active
+			background-color: $color-blue !important

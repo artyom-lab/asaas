@@ -283,11 +283,26 @@ $(function() {
     delayPopup(this);
   });
 
+  var icons = {
+    time: 'far fa-clock',
+    date: 'fas fa-calendar-alt',
+    up: 'fas fa-angle-up',
+    down: 'fas fa-angle-down',
+    previous: 'fas fa-angle-left',
+    next: 'fas fa-angle-right',
+    today: 'fas fa-crosshairs',
+    clear: 'far fa-trash-alt',
+    close: 'fas fa-times'
+  };
   $(".datepicker").datetimepicker({
-    format: 'DD / MM / YYYY'
+    format: 'DD / MM / YYYY',  
+    icons: icons,
+    // debug: true
   });
   $('.timepicker').datetimepicker({
-    format: 'LT'
+    format: 'LT',
+    icons: icons,
+    // debug: true
   });
 
   var placeholder;
