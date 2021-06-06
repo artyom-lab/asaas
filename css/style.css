@@ -194,11 +194,18 @@ hr {
   border-color: #EEEEF0; }
 
 .btn-sign {
-  margin-left: 10px;
   background: #24997D;
   transition: 0.3s;
   border: 0;
   font-weight: 500; }
+  @media (min-width: 1200px) {
+    .btn-sign {
+      margin-left: 10px; } }
+  [dir="rtl"] .btn-sign {
+    margin-left: 0; }
+    @media (min-width: 1200px) {
+      [dir="rtl"] .btn-sign {
+        margin-right: 10px; } }
   .btn-sign:hover {
     background: #218C73; }
   .btn-sign:focus {
@@ -206,6 +213,9 @@ hr {
   .btn-sign[disabled] {
     background: #EEEEF0;
     color: #B7B7BD; }
+    .btn-sign[disabled]:hover {
+      background: #EEEEF0;
+      color: #B7B7BD; }
 
 .btn-edit {
   background: #1F687E;
@@ -271,14 +281,24 @@ hr {
     opacity: 1;
     color: #165366;
     transform: translateX(5px); }
+    [dir="rtl"] .see-all:hover {
+      transform: translateX(-5px); }
+  [dir="rtl"] .see-all img {
+    transform: rotate(180deg); }
+  [dir="rtl"] .see-all img[src="../img/arrow-down.svg"] {
+    transform: rotate(0); }
 
 .see-all-2:hover {
   transform: translateX(0); }
+  [dir="rtl"] .see-all-2:hover {
+    transform: translateX(0); }
 
 .see-all-back {
   font-size: 14px; }
   .see-all-back:hover {
     transform: translateX(-5px); }
+    [dir="rtl"] .see-all-back:hover {
+      transform: translateX(5px); }
 
 .a-property {
   color: #000; }
@@ -339,6 +359,9 @@ hr {
     @media (min-width: 1200px) {
       .watch-container .watch {
         opacity: 0; } }
+    [dir="rtl"] .watch-container .watch {
+      right: 16px;
+      left: auto; }
   .watch-container:hover .watch {
     opacity: 1; }
 
@@ -388,9 +411,17 @@ hr {
   .owl-1 .owl-nav [class*=owl-].owl-prev {
     background-image: url(../img/owl-prev.svg);
     left: 4%; }
+    [dir="rtl"] .owl-1 .owl-nav [class*=owl-].owl-prev {
+      left: auto;
+      right: 4%;
+      transform: translateY(-50%) rotate(180deg); }
   .owl-1 .owl-nav [class*=owl-].owl-next {
     background-image: url(../img/owl-next.svg);
     right: 4%; }
+    [dir="rtl"] .owl-1 .owl-nav [class*=owl-].owl-next {
+      right: auto;
+      left: 4%;
+      transform: translateY(-50%) rotate(180deg); }
   .owl-1 .owl-nav [class*=owl-]:hover:not(.disabled) {
     opacity: 1; }
 .owl-1:hover .owl-dots {
@@ -449,6 +480,9 @@ hr {
     color: #1F687E;
     background: #FCFCFC;
     padding-right: 40px; }
+    [dir="rtl"] .form-control.form-control-blue, [dir="rtl"] .custom-select.form-control-blue {
+      padding-right: 13px;
+      padding-left: 40px; }
     .form-control.form-control-blue::-webkit-input-placeholder, .custom-select.form-control-blue::-webkit-input-placeholder {
       color: #1F687E; }
     .form-control.form-control-blue::-moz-placeholder, .custom-select.form-control-blue::-moz-placeholder {
@@ -461,11 +495,19 @@ hr {
 .custom-select {
   padding: 6px 40px 6px 13px;
   background: #FFF url(../img/arrow.svg) no-repeat right 0.75rem center/20px 11px; }
+  [dir="rtl"] .custom-select {
+    padding: 6px 13px 6px 40px;
+    background: #FFF url(../img/arrow.svg) no-repeat left 0.75rem center/20px 11px; }
   .custom-select:hover {
     background: #FCFCFC url(../img/arrow.svg) no-repeat right 0.75rem center/20px 11px; }
+    [dir="rtl"] .custom-select:hover {
+      background: #FCFCFC url(../img/arrow.svg) no-repeat left 0.75rem center/20px 11px; }
 
 .datepicker, .timepicker {
   padding-right: 44px; }
+  [dir="rtl"] .datepicker, [dir="rtl"] .timepicker {
+    padding-right: 13px;
+    padding-left: 44px; }
 
 .copy {
   position: absolute;
@@ -479,6 +521,9 @@ hr {
   background-size: cover;
   background-position: center center;
   background-image: url(../img/copy.svg); }
+  [dir="rtl"] .copy {
+    left: 13px;
+    right: auto; }
 
 .date {
   position: absolute;
@@ -493,6 +538,9 @@ hr {
   background-position: center center;
   background-image: url(../img/date.svg);
   pointer-events: none; }
+  [dir="rtl"] .date {
+    left: 13px;
+    right: auto; }
 
 .time {
   background-image: url(../img/time.svg); }
@@ -533,11 +581,17 @@ label.check-group {
     background-repeat: no-repeat;
     background-size: 10px;
     transition: 0.3s; }
+    [dir="rtl"] label.check-group div:before {
+      left: auto;
+      right: 0; }
   label.check-group input:checked ~ div:before {
     border-color: #448FFF;
     border-radius: 6px; }
 label.checkbox-group {
   padding-left: 30px; }
+  [dir="rtl"] label.checkbox-group {
+    padding-left: 0;
+    padding-right: 30px; }
   label.checkbox-group div:before {
     border-radius: 4px;
     width: 20px;
@@ -554,10 +608,15 @@ label.checkbox-group {
   padding-bottom: 1rem;
   padding-left: 0;
   list-style: none; }
+  [dir="rtl"] .list-check {
+    padding-right: 0; }
   .list-check li {
     position: relative;
     padding-left: 30px;
     margin-bottom: 24px; }
+    [dir="rtl"] .list-check li {
+      padding-right: 30px;
+      padding-left: 0; }
     .list-check li:before {
       content: "";
       position: absolute;
@@ -567,6 +626,9 @@ label.checkbox-group {
       height: 20px;
       background-image: url(../img/checkmark.svg);
       background-size: cover; }
+      [dir="rtl"] .list-check li:before {
+        left: auto;
+        right: 0; }
 
 .list-check-warning li {
   margin-bottom: 20px; }
@@ -603,6 +665,9 @@ label.checkbox-group {
     padding-right: 45px;
     white-space: nowrap;
     text-overflow: ellipsis; }
+    [dir="rtl"] .uploader.uploader-control .form-control {
+      padding-right: 13px;
+      padding-left: 45px; }
     .uploader.uploader-control .form-control img {
       width: 20px; }
   .uploader.uploader-control.uploaded .delete {
@@ -696,6 +761,9 @@ label.checkbox-group {
     right: 13px;
     top: 50%;
     transform: translateY(-50%); }
+    [dir="rtl"] .uploader > .delete {
+      left: 13px;
+      right: auto; }
   .uploader .star:hover {
     opacity: 0.8; }
   .uploader .delete {
@@ -808,8 +876,13 @@ label.checkbox-group {
     color: #2A2A2A;
     font-weight: 600; }
 
+[dir="rtl"] .pagination {
+  padding-right: 0; }
 .pagination .page-item:not(:last-child) {
   margin-right: 16px; }
+  [dir="rtl"] .pagination .page-item:not(:last-child) {
+    margin-left: 16px;
+    margin-right: 0; }
 .pagination .page-item .page-link {
   color: #2A2A2A;
   background: #F5F5F7;
@@ -1033,6 +1106,8 @@ label.checkbox-group {
   background-position: center center;
   background-image: url(../img/checked.svg); }
 
+[dir="rtl"] .bootstrap-datetimepicker-widget ul {
+  padding-right: 0; }
 .bootstrap-datetimepicker-widget.dropdown-menu {
   min-width: 290px;
   width: 290px; }
@@ -1043,6 +1118,10 @@ label.checkbox-group {
     display: none; }
 .bootstrap-datetimepicker-widget .timepicker, .bootstrap-datetimepicker-widget .datepicker {
   padding-right: 0; }
+  [dir="rtl"] .bootstrap-datetimepicker-widget .timepicker, [dir="rtl"] .bootstrap-datetimepicker-widget .datepicker {
+    padding-left: 0; }
+[dir="rtl"] .bootstrap-datetimepicker-widget .datepicker .prev, [dir="rtl"] .bootstrap-datetimepicker-widget .datepicker .next {
+  transform: rotate(180deg); }
 .bootstrap-datetimepicker-widget .btn-primary {
   background-color: #1F687E;
   border-color: #1F687E; }
@@ -1052,5 +1131,40 @@ label.checkbox-group {
     box-shadow: none; }
 .bootstrap-datetimepicker-widget .day.active {
   background-color: #1F687E !important; }
+
+[dir="rtl"] body {
+  text-align: right; }
+[dir="rtl"] .text-left {
+  text-align: right !important; }
+[dir="rtl"] .text-right {
+  text-align: left !important; }
+@media (min-width: 576px) {
+  [dir="rtl"] .text-sm-right {
+    text-align: left !important; } }
+@media (min-width: 992px) {
+  [dir="rtl"] .text-lg-right {
+    text-align: left !important; } }
+[dir="rtl"] .ml-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important; }
+[dir="rtl"] .navbar-nav {
+  padding-right: 0; }
+[dir="rtl"] .navbar-brand {
+  margin-right: 0;
+  margin-left: 1rem; }
+[dir="rtl"] .pl-1 {
+  padding-left: 0 !important;
+  padding-right: 0.25rem !important; }
+[dir="rtl"] .pr-1 {
+  padding-right: 0 !important;
+  padding-left: 0.25rem !important; }
+[dir="rtl"] .ml-0 {
+  margin-right: 0 !important; }
+[dir="rtl"] .ml-2 {
+  margin-left: 0 !important;
+  margin-right: 0.5rem !important; }
+[dir="rtl"] .mr-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important; }
 
 /*# sourceMappingURL=style.css.map */

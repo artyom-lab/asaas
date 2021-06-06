@@ -233,11 +233,16 @@ hr
 	border-color: $color-hr
 
 .btn-sign
-	margin-left: 10px
 	background: $color-green
 	transition: $transition
 	border: 0
 	font-weight: $font-weight-500
+	@media (min-width: 1200px)
+		margin-left: 10px
+	[dir="rtl"] &
+		margin-left: 0
+		@media (min-width: 1200px)
+			margin-right: 10px
 	&:hover 
 		background: $color-green-2
 	&:focus 
@@ -245,6 +250,9 @@ hr
 	&[disabled]
 		background: $color-hr
 		color: $color-disabled
+		&:hover 
+			background: $color-hr
+			color: $color-disabled
 
 .btn-edit
 	background: $color-blue
@@ -311,15 +319,26 @@ hr
 		opacity: 1
 		color: $color-blue-2
 		transform: translateX(5px)
+		[dir="rtl"] &
+			transform: translateX(-5px)
+	[dir="rtl"] &
+		img
+			transform: rotate(180deg)
+		img[src="../img/arrow-down.svg"]
+			transform: rotate(0)
 
 .see-all-2
 	&:hover
 		transform: translateX(0)
+		[dir="rtl"] &
+			transform: translateX(0)
 
 .see-all-back
 	font-size: $fz-14
 	&:hover
 		transform: translateX(-5px)
+		[dir="rtl"] &
+			transform: translateX(5px)
 
 .a-property
 	color: #000
@@ -379,6 +398,9 @@ hr
 		color: $color-black
 		@media (min-width: 1200px)
 			opacity: 0
+		[dir="rtl"] &
+			right: 16px
+			left: auto
 	&:hover 
 		.watch 
 			opacity: 1
@@ -435,9 +457,17 @@ hr
 			&.owl-prev
 				background-image: url(../img/owl-prev.svg)
 				left: 4%
+				[dir="rtl"] &
+					left: auto
+					right: 4%
+					transform: translateY(-50%) rotate(180deg)
 			&.owl-next
 				background-image: url(../img/owl-next.svg)
 				right: 4%
+				[dir="rtl"] &
+					right: auto
+					left: 4%
+					transform: translateY(-50%) rotate(180deg)
 			&:hover:not(.disabled)
 				opacity: 1
 	&:hover 
@@ -498,6 +528,9 @@ hr
 		color: $color-blue
 		background: $color-white-2
 		padding-right: 40px
+		[dir="rtl"] &
+			padding-right: 13px
+			padding-left: 40px
 		&::-webkit-input-placeholder
 			color: $color-blue
 		&::-moz-placeholder
@@ -510,11 +543,19 @@ hr
 .custom-select
 	padding: 6px 40px 6px 13px
 	background: $color-white url(../img/arrow.svg) no-repeat right .75rem center/20px 11px
+	[dir="rtl"] &
+		padding: 6px 13px 6px 40px
+		background: $color-white url(../img/arrow.svg) no-repeat left .75rem center/20px 11px
 	&:hover 
 		background: $color-white-2 url(../img/arrow.svg) no-repeat right .75rem center/20px 11px
+		[dir="rtl"] &
+			background: $color-white-2 url(../img/arrow.svg) no-repeat left .75rem center/20px 11px
 
 .datepicker, .timepicker
 	padding-right: 44px
+	[dir="rtl"] &
+		padding-right: 13px
+		padding-left: 44px
 
 .copy 
 	position: absolute 
@@ -528,6 +569,9 @@ hr
 	background-size: cover
 	background-position: center center
 	background-image: url(../img/copy.svg)
+	[dir="rtl"] &
+		left: 13px
+		right: auto
 
 .date 
 	position: absolute 
@@ -542,6 +586,9 @@ hr
 	background-position: center center
 	background-image: url(../img/date.svg)
 	pointer-events: none
+	[dir="rtl"] &
+		left: 13px
+		right: auto
 .time
 	background-image: url(../img/time.svg)
 
@@ -581,12 +628,18 @@ label
 			background-repeat: no-repeat
 			background-size: 10px
 			transition: $transition
+			[dir="rtl"] &
+				left: auto
+				right: 0
 		input
 			&:checked ~ div:before
 				border-color: $color-checked
 				border-radius: 6px
 	&.checkbox-group
 		padding-left: 30px
+		[dir="rtl"] &
+			padding-left: 0
+			padding-right: 30px
 		div:before
 			border-radius: 4px
 			width: 20px
@@ -604,10 +657,15 @@ label
 	padding-bottom: 1rem
 	padding-left: 0
 	list-style: none
+	[dir="rtl"] &
+		padding-right: 0
 	li
 		position: relative
 		padding-left: 30px
 		margin-bottom: 24px
+		[dir="rtl"] &
+			padding-right: 30px
+			padding-left: 0
 		&:before 
 			content: ''
 			position: absolute
@@ -617,6 +675,9 @@ label
 			height: 20px
 			background-image: url(../img/checkmark.svg)
 			background-size: cover
+			[dir="rtl"] &
+				left: auto
+				right: 0
 
 .list-check-warning
 	li 
@@ -656,6 +717,9 @@ label
 			padding-right: 45px
 			white-space: nowrap
 			text-overflow: ellipsis
+			[dir="rtl"] & 
+				padding-right: 13px
+				padding-left: 45px
 			img 
 				width: 20px
 		&.uploaded 
@@ -757,6 +821,9 @@ label
 		right: 13px
 		top: 50%
 		transform: translateY(-50%)
+		[dir="rtl"] &
+			left: 13px
+			right: auto
 	.star
 		&:hover
 			opacity: .8
@@ -875,9 +942,14 @@ label
 		font-weight: $font-weight-600
 
 .pagination 
+	[dir="rtl"] &
+		padding-right: 0
 	.page-item
 		&:not(:last-child)
 			margin-right: 16px
+			[dir="rtl"] &
+				margin-left: 16px
+				margin-right: 0
 		.page-link 
 			color: $color-black
 			background: $color-gray-pagination
@@ -1100,6 +1172,9 @@ label
 			background-image: url(../img/checked.svg)
 
 .bootstrap-datetimepicker-widget 
+	ul 
+		[dir="rtl"] & 
+			padding-right: 0
 	&.dropdown-menu
 		min-width: 290px
 		width: 290px
@@ -1109,6 +1184,12 @@ label
 			display: none
 	.timepicker, .datepicker 
 		padding-right: 0
+		[dir="rtl"] & 
+			padding-left: 0
+	.datepicker 
+		.prev, .next
+			[dir="rtl"] & 
+				transform: rotate(180deg)
 	.btn-primary
 		background-color: $color-blue
 		border-color: $color-blue
@@ -1119,3 +1200,40 @@ label
 	.day 
 		&.active
 			background-color: $color-blue !important
+
+[dir="rtl"]
+	body 
+		text-align: right
+	.text-left 
+		text-align: right !important
+	.text-right 
+		text-align: left !important
+	.text-sm-right
+		@media (min-width: 576px)
+			text-align: left !important
+	.text-lg-right
+		@media (min-width: 992px)
+			text-align: left !important
+	.ml-auto
+		margin-left: 0 !important
+		margin-right: auto !important
+	.navbar-nav
+		padding-right: 0
+	.navbar-brand 
+		margin-right: 0
+		margin-left: 1rem
+	.pl-1	
+		padding-left: 0 !important
+		padding-right: 0.25rem !important
+	.pr-1	
+		padding-right: 0 !important
+		padding-left: 0.25rem !important
+	.ml-0
+		margin-right: 0 !important
+	.ml-2
+		margin-left: 0 !important
+		margin-right: .5rem !important
+	.mr-2
+		margin-right: 0 !important
+		margin-left: .5rem !important
+

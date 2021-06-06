@@ -1,6 +1,12 @@
 $(function() {
 
+  var dir = false;
+  if ( $("html").attr("dir") == "rtl" ) {
+    dir = true;
+  };
+
   $(".owl-1").owlCarousel({
+    rtl: dir,
     items: 1,
     center: true,
     loop: true,
